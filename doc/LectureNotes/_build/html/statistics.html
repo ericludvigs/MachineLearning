@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -1060,27 +953,27 @@ uncorrelated.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.899444949551402
-[[10.50764587 14.915888    4.01878557 10.96438655  3.9173859  11.73359971
-   9.21793896 -2.24485338  7.74529434 12.25404247]
- [14.915888   21.17350714  5.70477499 15.56424378  5.56083543 16.6561627
-  13.08511411 -3.18663019 10.99465516 17.39494529]
- [ 4.01878557  5.70477499  1.53703671  4.19347197  1.49825509  4.48766753
-   3.52552042 -0.85857332  2.96228836  4.68671762]
- [10.96438655 15.56424378  4.19347197 11.4409806   4.08766472 12.2436295
-   9.61861937 -2.34243146  8.08196262 12.78669458]
- [ 3.9173859   5.56083543  1.49825509  4.08766472  1.46045199  4.37443731
-   3.43656654 -0.83691029  2.88754562  4.56846508]
- [11.73359971 16.6561627   4.48766753 12.2436295   4.37443731 13.10258872
-  10.29341942 -2.50676615  8.64895758 13.68375286]
- [ 9.21793896 13.08511411  3.52552042  9.61861937  3.43656654 10.29341942
-   8.0865305  -1.96932041  6.79463805 10.7499831 ]
- [-2.24485338 -3.18663019 -0.85857332 -2.34243146 -0.83691029 -2.50676615
-  -1.96932041  0.47959046 -1.65470462 -2.61795354]
- [ 7.74529434 10.99465516  2.96228836  8.08196262  2.88754562  8.64895758
-   6.79463805 -1.65470462  5.70913648  9.03258131]
- [12.25404247 17.39494529  4.68671762 12.78669458  4.56846508 13.68375286
-  10.7499831  -2.61795354  9.03258131 14.29069448]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.66617168469673
+[[ 1.31901056  1.37040343  4.92740215  0.39706027  2.78890834  5.48780047
+   5.56413916  3.99371466  6.81203214  3.34782766]
+ [ 1.37040343  1.42379872  5.11938949  0.41253101  2.89757312  5.70162272
+   5.7809358   4.14932255  7.07745069  3.47826973]
+ [ 4.92740215  5.11938949 18.40720059  1.48329035 10.41847076 20.50066971
+  20.78584667 14.91924234 25.44757627 12.50641483]
+ [ 0.39706027  0.41253101  1.48329035  0.11952661  0.83954195  1.65198643
+   1.67496658  1.20222345  2.05061841  1.00779281]
+ [ 2.78890834  2.89757312 10.41847076  0.83954195  5.89685175 11.60337375
+  11.76478383  8.4442873  14.40332158  7.07862755]
+ [ 5.48780047  5.70162272 20.50066971  1.65198643 11.60337375 22.83223115
+  23.14984157 16.61602252 28.34175429 13.92878175]
+ [ 5.56413916  5.7809358  20.78584667  1.67496658 11.76478383 23.14984157
+  23.47187014 16.84716164 28.73600557 14.1225397 ]
+ [ 3.99371466  4.14932255 14.91924234  1.20222345  8.4442873  16.61602252
+  16.84716164 12.09221309 20.62554572 10.13658936]
+ [ 6.81203214  7.07745069 25.44757627  2.05061841 14.40332158 28.34175429
+  28.73600557 20.62554572 35.18075088 17.28986131]
+ [ 3.34782766  3.47826973 12.50641483  1.00779281  7.07862755 13.92878175
+  14.1225397  10.13658936 17.28986131  8.49724059]]
 </pre></div>
 </div>
 </div>
@@ -1348,15 +1241,15 @@ more practically oriented methods like the blocking technique.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.027931820179105067
-3.8948621306998614
-0.09739722453284225
-1.281127658556346 13.800407897050107 32.990171109310765
-4.053326337300775 5.0047469652158 15.94611730275583
-[[ 1.28112766  4.05332634  5.00474697]
- [ 4.05332634 13.8004079  15.9461173 ]
- [ 5.00474697 15.9461173  32.99017111]]
-[42.9738062   0.07783419  5.02006627]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.04944931918420588
+3.9197998358799464
+-0.7106484566285455
+0.9059370566788297 9.700258285068488 9.7423220054006
+2.7796611648499043 2.2456969087678473 7.0827744231113545
+[[0.90593706 2.77966116 2.24569691]
+ [2.77966116 9.70025829 7.08277442]
+ [2.24569691 7.08277442 9.74232201]]
+[17.56239321  0.09298511  2.69313903]
 </pre></div>
 </div>
 </div>
@@ -1686,7 +1579,7 @@ assumption for approximating <span class="math notranslate nohighlight">\(\sigma
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.005332694146660865 0.995998835818754
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.031696741936652305 0.9106590586410548
 </pre></div>
 </div>
 <img alt="_images/statistics_188_1.png" src="_images/statistics_188_1.png" />

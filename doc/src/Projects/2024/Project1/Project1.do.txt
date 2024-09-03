@@ -1,8 +1,38 @@
-TITLE: Project 1 on Machine Learning, deadline October 9 (midnight), 2024
+TITLE: Project 1 on Machine Learning, deadline October 7 (midnight), 2024
 AUTHOR: "Data Analysis and Machine Learning FYS-STK3155/FYS4155":"http://www.uio.no/studier/emner/matnat/fys/FYS3155/index-eng.html" at University of Oslo, Norway
 DATE: September 2
 
-===== Note on using reference material, AI and other tools =====
+
+===== Preamble: Note on writing reports, using reference material, AI and other tools =====
+
+We want you to answer the three different projects by handing in
+reports written like a standard scientific/technical report.  The link
+at
+URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/Projects/ProjectWriting/projectwriting.ipynb"
+gives some guidance. See also the grading suggestion at
+URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/Projects/EvaluationGrading/EvaluationForm.md".
+
+Furthermore, at
+URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/Projects/ReportExample/"
+you can find examples of previous reports. How to write reports will
+also be discussed during the various lab sessions. Please do ask us if you are in doubt.
+
+
+
+When using codes and material from other  sources, you should refer to these in the bibliography of your report, indicating  wherefrom you for example
+got the code, whether this is from the lecture notes, softwares like
+Scikit-Learn, TensorFlow, PyTorch or  other sources. These should
+always be cited correctly. How to cite some of the libraries is often
+indicated from their corresponding GitHub sites or websites, see for example how to cite Scikit-Learn at  URL:"https://scikit-learn.org/dev/about.html". 
+
+We enocurage you to use tools like
+"ChatGPT":"https://openai.com/chatgpt/" or similar in writing the report. If you use for example ChatGPT,
+please do cite it properly and include (if possible) your questions and answers as an addition to the report. This can
+be uploaded to for example your website, GitHub/GitLab or similar as supplemental material.
+
+
+
+
 
 
 ===== Regression analysis and resampling methods  =====
@@ -12,14 +42,8 @@ DATE: September 2
 The main aim of this project is to study in more detail various
 regression methods, including the Ordinary Least Squares (OLS) method.
 In addition to the scientific part, in this course we want also to
-give you an experience in writing scientific reports.  The format for
-the delivery of your answers is namely that of a scientific report. At
-for example
-URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/Projects/EvaluationGrading/EvaluationForm.md"
-we detail how to write a report. Furthermore, at
-URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/Projects/ReportExample/"
-you can find examples of previous reports. How to write reports will
-also be discussed during the various lab sessions.
+give you an experience in writing scientific reports.
+
 
 
 _A small recommendation when developing the codes here_. Instead of
@@ -27,7 +51,7 @@ jumping on to the two-dimensional function described below, we
 recommend to do the code development and testing with a simpler
 one-dimensional function, similar to those discussed in the exercises
 of weeks 35 and 36. A simple test, as discussed during the lectures the first
-two weeks is to set the design matrix equal to the identity
+three weeks is to set the design matrix equal to the identity
 matrix. Then your model should give a mean square error which is exactly equal to zero.
 When you are sure that your codes function well, you can then replace
 the one-dimensional test function with the two-dimensional _Franke_ function
@@ -35,8 +59,6 @@ discussed here.
 
 The Franke function serves as a stepping stone towards the analysis of
 real topographic data. The latter is the last part of this project.
-
-May be change the Franke function
 
 
 ===  Description of two-dimensional function ===
@@ -62,9 +84,10 @@ f(x,y) &= \frac{3}{4}\exp{\left(-\frac{(9x-2)^2}{4} - \frac{(9y-2)^2}{4}\right)}
 
 The function will be defined for $x,y\in [0,1]$.  In a sense, our data are thus scaled to a particular domain for the input values.
 
+
 Our first step will
 be to perform an OLS regression analysis of this function, trying out
-a polynomial fit with an $x$ and $y$ dependence of the form $[x, y,
+a polynomial fit with an $x$ and a $y$ dependence of the form $[x, y,
 x^2, y^2, xy, \dots]$. We will also include bootstrap first as a
 resampling technique.  After that we will include the cross-validation
 technique.
@@ -128,6 +151,8 @@ plt.show()
 !ec
 
 
+If you wish to compare your results with other on the Franke function or other popular functions tested with linear regression, see the list in Figure 1 of the article by Cook et al at URL:"https://arxiv.org/abs/2401.11694".
+
 === Part a) : Ordinary Least Square (OLS) on the Franke function ===
 
 We will generate our own dataset for a function
@@ -189,6 +214,9 @@ approximately $2/3$ to $4/5$ of the data as training data.
 
 You can easily reuse the solutions to your exercises from week 35 and week 36.
 See also the lecture slides from week 35 and week 36.
+
+On scaling, we recommend reading the following section from the scikit-learn software description, see URL:"https://scikit-learn.org/stable/auto_examples/preprocessing/plot_all_scaling.html#plot-all-scaling-standard-scaler-section".
+
 
 
 === Part b): Adding Ridge regression for  the Franke function ===
@@ -358,18 +386,16 @@ You can follow the code example in the jupyter-book at URL:"https://compphysics.
 === Part f):  Cross-validation as resampling techniques, adding more complexity  ===
 
 
-The aim here is to write your own code for another widely popular
+The aim here is to implement another widely popular
 resampling technique, the so-called cross-validation method.  
 
 Implement the $k$-fold cross-validation algorithm (write your own
-code) and evaluate again the MSE function resulting
-from the test folds. You can compare your own code with that from
-_Scikit-Learn_ if needed. 
+code or use the functionality of _Scikit-Learn_) and evaluate again the MSE function resulting
+from the test folds. 
 
 Compare the MSE you get from your cross-validation code with the one
 you got from your _bootstrap_ code. Comment your results. Try $5-10$
-folds.  You can also compare your own cross-validation code with the
-one provided by _Scikit-Learn_.
+folds.  
 
 In addition to using the ordinary least squares method, you should include both Ridge and Lasso regression. 
 

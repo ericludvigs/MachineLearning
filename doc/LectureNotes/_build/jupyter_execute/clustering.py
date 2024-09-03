@@ -233,7 +233,6 @@ data = generate_simple_clustering_dataset()
 # In[3]:
 
 
-
 n_samples, dimensions = data.shape
 n_clusters = 4
 
@@ -299,7 +298,6 @@ plt.show()
 # or a maximum amount of iterations.
 
 # In[5]:
-
 
 
 max_iterations = 100

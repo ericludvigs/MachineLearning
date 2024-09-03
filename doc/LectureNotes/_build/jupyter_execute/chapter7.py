@@ -264,7 +264,6 @@ plt.show()
 # In[ ]:
 
 
-
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -1034,7 +1033,6 @@ plt.show()
 # As you will see from the confusion matrix below, XGBoots does an excellent job on the Wisconsin cancer data and outperforms essentially all agorithms we have discussed till now.
 
 # In[ ]:
-
 
 
 import matplotlib.pyplot as plt

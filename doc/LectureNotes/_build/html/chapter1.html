@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -1101,13 +994,13 @@ example of the functionality of <strong>Scikit-Learn</strong>.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The intercept alpha: 
- [2.07575375]
+ [2.01173838]
 Coefficient beta : 
- [[4.80180325]]
-Mean squared error: 0.28
-Variance score: 0.88
+ [[4.76160572]]
+Mean squared error: 0.33
+Variance score: 0.86
 Mean squared log error: 0.01
-Mean absolute error: 0.40
+Mean absolute error: 0.45
 </pre></div>
 </div>
 <img alt="_images/chapter1_19_1.png" src="_images/chapter1_19_1.png" />
@@ -1207,7 +1100,7 @@ a linear <span class="math notranslate nohighlight">\(x\)</span>-dependence we s
 </div>
 <div class="cell_output docutils container">
 <img alt="_images/chapter1_33_0.png" src="_images/chapter1_33_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.005000000000000002
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.004999999999999991
 </pre></div>
 </div>
 </div>
@@ -1334,6 +1227,54 @@ After having downloaded this file to our own computer, we are now ready to read 
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/matplotlib/style/core.py:137,</span> in <span class="ni">use</span><span class="nt">(style)</span>
+<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">137</span>     <span class="n">style</span> <span class="o">=</span> <span class="n">_rc_params_in_file</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span> <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/matplotlib/__init__.py:866,</span> in <span class="ni">_rc_params_in_file</span><span class="nt">(fname, transform, fail_on_error)</span>
+<span class="g g-Whitespace">    </span><span class="mi">865</span> <span class="n">rc_temp</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ne">--&gt; </span><span class="mi">866</span> <span class="k">with</span> <span class="n">_open_file_or_url</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">fd</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">867</span>     <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/contextlib.py:119,</span> in <span class="ni">_GeneratorContextManager.__enter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">119</span>     <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/matplotlib/__init__.py:843,</span> in <span class="ni">_open_file_or_url</span><span class="nt">(fname)</span>
+<span class="g g-Whitespace">    </span><span class="mi">842</span> <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">843</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">844</span>     <span class="k">yield</span> <span class="n">f</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;seaborn&#39;
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">OSError</span><span class="g g-Whitespace">                                   </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">plt</span><span class="p">,</span> <span class="n">mpl</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">mpl</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.family&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;serif&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">MakePlot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">styles</span><span class="p">,</span> <span class="n">labels</span><span class="p">,</span> <span class="n">axlabels</span><span class="p">):</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/matplotlib/style/core.py:139,</span> in <span class="ni">use</span><span class="nt">(style)</span>
+<span class="g g-Whitespace">    </span><span class="mi">137</span>         <span class="n">style</span> <span class="o">=</span> <span class="n">_rc_params_in_file</span><span class="p">(</span><span class="n">style</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">139</span>         <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span>             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">style</span><span class="si">!r}</span><span class="s2"> is not a valid package style, path of style &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>             <span class="sa">f</span><span class="s2">&quot;file, URL of style file, or library style name (library &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span>             <span class="sa">f</span><span class="s2">&quot;styles are listed in `style.available`)&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">    </span><span class="mi">143</span> <span class="n">filtered</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nn">    144 for k</span> in <span class="ni">style:  # don&#39;t trigger RcParams.__getitem__</span><span class="nt">(&#39;backend&#39;)</span>
+
+<span class="ne">OSError</span>: &#39;seaborn&#39; is not a valid package style, path of style file, URL of style file, or library style name (library styles are listed in `style.available`)
+</pre></div>
+</div>
+</div>
 </div>
 <p>Our next step is to read the data on experimental binding energies and
 reorganize them as functions of the mass number <span class="math notranslate nohighlight">\(A\)</span>, the number of
@@ -1353,11 +1294,6 @@ data) to actually open the file and simply take a look at it!</p>
 <span class="sd">   widths=(1,3,5,5,5,1,3,4,1,13,11,11,9,1,2,11,9,1,3,1,12,11,1),                                                            </span>
 <span class="sd">   Pandas has also a variable header, with length 39 in this case.                                                          </span>
 <span class="sd">&quot;&quot;&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;                                                                                                                         \nThis is taken from the data file of the mass 2016 evaluation.                                                               \nAll files are 3436 lines long with 124 character per line.                                                                  \n       Headers are 39 lines long.                                                                                           \n   col 1     :  Fortran character control: 1 = page feed  0 = line feed                                                     \n   format    :  a1,i3,i5,i5,i5,1x,a3,a4,1x,f13.5,f11.5,f11.3,f9.3,1x,a2,f11.3,f9.3,1x,i3,1x,f12.5,f11.5                     \n   These formats are reflected in the pandas widths variable below, see the statement                                       \n   widths=(1,3,5,5,5,1,3,4,1,13,11,11,9,1,2,11,9,1,3,1,12,11,1),                                                            \n   Pandas has also a variable header, with length 39 in this case.                                                          \n&#39;
 </pre></div>
 </div>
 </div>
@@ -1386,40 +1322,6 @@ covert them into the <strong>pandas</strong> DataFrame structure.</p>
 <span class="n">Masses</span> <span class="o">=</span> <span class="n">Masses</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
 <span class="c1"># Find the rows of the grouped DataFrame with the maximum binding energy.</span>
 <span class="n">Masses</span> <span class="o">=</span> <span class="n">Masses</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">t</span><span class="p">:</span> <span class="n">t</span><span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">Ebinding</span><span class="o">==</span><span class="n">t</span><span class="o">.</span><span class="n">Ebinding</span><span class="o">.</span><span class="n">max</span><span class="p">()])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read the experimental data with Pandas</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Masses</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_fwf</span><span class="p">(</span><span class="n">infile</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>               <span class="n">names</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;Z&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;Element&#39;</span><span class="p">,</span> <span class="s1">&#39;Ebinding&#39;</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>               <span class="n">widths</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>               <span class="n">header</span><span class="o">=</span><span class="mi">39</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>               <span class="n">index_col</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Extrapolated values are indicated by &#39;#&#39; in place of the decimal place, so</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># the Ebinding column won&#39;t be numeric. Coerce to float and drop these entries.</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">Masses</span><span class="p">[</span><span class="s1">&#39;Ebinding&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Masses</span><span class="p">[</span><span class="s1">&#39;Ebinding&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/pandas/util/_decorators.py:311,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">arguments</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">309</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">310</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">311</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/pandas/io/parsers/readers.py:871,</span> in <span class="ni">read_fwf</span><span class="nt">(filepath_or_buffer, colspecs, widths, infer_nrows, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">869</span>                     <span class="n">len_index</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">index_col</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">870</span>         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">+</span> <span class="n">len_index</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">colspecs</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">871</span>             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Length of colspecs must match length of names&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">873</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;colspecs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">colspecs</span>
-<span class="g g-Whitespace">    </span><span class="mi">874</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;infer_nrows&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">infer_nrows</span>
-
-<span class="ne">ValueError</span>: Length of colspecs must match length of names
 </pre></div>
 </div>
 </div>

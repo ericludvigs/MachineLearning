@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -1350,10 +1243,10 @@ covariance matrix through the <strong>np.linalg.eig()</strong> function.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.031405320178937886
-3.7508636683863235
-[[ 1.07728714  3.41235715]
- [ 3.41235715 11.76274779]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.15792278643800434
+3.469596964296967
+[[0.82924408 2.51097872]
+ [2.51097872 8.91660026]]
 </pre></div>
 </div>
 </div>
@@ -1390,10 +1283,10 @@ a more brute force way. Here we scale the mean values for each column of the des
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08460107110703337
-1.9541100061668464
-[[1.         0.73391309]
- [0.73391309 1.        ]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08557805981945521
+1.6515332649941654
+[[1.         0.67509467]
+ [0.67509467 1.        ]]
 </pre></div>
 </div>
 </div>
@@ -1423,30 +1316,30 @@ this matrix we easily see that it is a positive definite matrix.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.80226723 -3.04272582]
- [ 0.43201921  2.14816084]
- [ 1.57309147  3.36212275]
- [-1.88172029 -7.76015446]
- [ 1.07203435  4.92153252]
- [ 0.60376519  3.40447029]
- [-0.63613568 -1.37836163]
- [-1.93626155 -5.91514067]
- [ 1.59593425  4.28910504]
- [-0.02045972 -0.02900886]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-1.2222736  -2.47780495]
+ [-0.84963695 -3.33047051]
+ [ 1.52869849  3.46922796]
+ [-0.31385129 -1.2500845 ]
+ [-0.02761005  0.80816668]
+ [-0.79036971 -1.8310483 ]
+ [ 0.22681817 -0.28207517]
+ [-0.69475072 -1.99810021]
+ [-0.17979265 -0.38267862]
+ [ 2.3227683   7.27486761]]
           0         1
-0 -0.802267 -3.042726
-1  0.432019  2.148161
-2  1.573091  3.362123
-3 -1.881720 -7.760154
-4  1.072034  4.921533
-5  0.603765  3.404470
-6 -0.636136 -1.378362
-7 -1.936262 -5.915141
-8  1.595934  4.289105
-9 -0.020460 -0.029009
+0 -1.222274 -2.477805
+1 -0.849637 -3.330471
+2  1.528698  3.469228
+3 -0.313851 -1.250084
+4 -0.027610  0.808167
+5 -0.790370 -1.831048
+6  0.226818 -0.282075
+7 -0.694751 -1.998100
+8 -0.179793 -0.382679
+9  2.322768  7.274868
           0         1
-0  1.000000  0.965295
-1  0.965295  1.000000
+0  1.000000  0.972591
+1  0.972591  1.000000
 </pre></div>
 </div>
 </div>
@@ -1503,40 +1396,37 @@ this matrix we easily see that it is a positive definite matrix.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     0         1         2         3         4         5         6         7   \
 0   0.0  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000   
-1   0.0  0.090537  0.085374  0.090091  0.089893  0.089356  0.080696  0.081199   
-2   0.0  0.085374  0.081563  0.083636  0.083982  0.084114  0.074319  0.075079   
-3   0.0  0.090091  0.083636  0.094993  0.094026  0.092598  0.088156  0.088323   
-4   0.0  0.089893  0.083982  0.094026  0.093386  0.092327  0.086892  0.087259   
-5   0.0  0.089356  0.084114  0.092598  0.092327  0.091697  0.085163  0.085746   
-6   0.0  0.080696  0.074319  0.088156  0.086892  0.085163  0.083797  0.083762   
-7   0.0  0.081199  0.075079  0.088323  0.087259  0.085746  0.083762  0.083873   
-8   0.0  0.081680  0.075858  0.088410  0.087566  0.086291  0.083628  0.083894   
-9   0.0  0.082105  0.076636  0.088369  0.087768  0.086762  0.083348  0.083777   
-10  0.0  0.071274  0.065396  0.079741  0.078433  0.076697  0.077121  0.077004   
-11  0.0  0.071854  0.066119  0.080197  0.079026  0.077431  0.077466  0.077460   
-12  0.0  0.072470  0.066891  0.080665  0.079640  0.078196  0.077810  0.077920   
-13  0.0  0.073113  0.067709  0.081133  0.080262  0.078981  0.078139  0.078370   
-14  0.0  0.073773  0.068568  0.081581  0.080878  0.079775  0.078433  0.078791   
+1   0.0  0.078704  0.076964  0.076716  0.075698  0.074706  0.067097  0.066458   
+2   0.0  0.076964  0.076620  0.076716  0.076383  0.075972  0.068301  0.068022   
+3   0.0  0.076716  0.076716  0.079642  0.079578  0.079412  0.072860  0.072759   
+4   0.0  0.075698  0.076383  0.079578  0.079873  0.080016  0.073481  0.073581   
+5   0.0  0.074706  0.075972  0.079412  0.080016  0.080425  0.073934  0.074208   
+6   0.0  0.067097  0.068301  0.072860  0.073481  0.073934  0.068963  0.069275   
+7   0.0  0.066458  0.068022  0.072759  0.073581  0.074208  0.069275  0.069704   
+8   0.0  0.065860  0.067729  0.072633  0.073627  0.074407  0.069521  0.070054   
+9   0.0  0.065299  0.067429  0.072489  0.073634  0.074548  0.069717  0.070342   
+10  0.0  0.058190  0.060003  0.065359  0.066349  0.067149  0.063511  0.064061   
+11  0.0  0.057786  0.059797  0.065273  0.066380  0.067284  0.063684  0.064307   
+12  0.0  0.057415  0.059597  0.065186  0.066395  0.067392  0.063832  0.064521   
+13  0.0  0.057076  0.059406  0.065101  0.066402  0.067482  0.063965  0.064713   
+14  0.0  0.056767  0.059226  0.065024  0.066406  0.067560  0.064087  0.064889   
 
           8         9         10        11        12        13        14  
 0   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  
-1   0.081680  0.082105  0.071274  0.071854  0.072470  0.073113  0.073773  
-2   0.075858  0.076636  0.065396  0.066119  0.066891  0.067709  0.068568  
-3   0.088410  0.088369  0.079741  0.080197  0.080665  0.081133  0.081581  
-4   0.087566  0.087768  0.078433  0.079026  0.079640  0.080262  0.080878  
-5   0.086291  0.086762  0.076697  0.077431  0.078196  0.078981  0.079775  
-6   0.083628  0.083348  0.077121  0.077466  0.077810  0.078139  0.078433  
-7   0.083894  0.083777  0.077004  0.077460  0.077920  0.078370  0.078791  
-8   0.084078  0.084137  0.076786  0.077358  0.077938  0.078514  0.079067  
-9   0.084137  0.084387  0.076427  0.077117  0.077822  0.078529  0.079223  
-10  0.076786  0.076427  0.071915  0.072200  0.072478  0.072735  0.072954  
-11  0.077358  0.077117  0.072200  0.072576  0.072948  0.073302  0.073621  
-12  0.077938  0.077822  0.072478  0.072948  0.073417  0.073871  0.074292  
-13  0.078514  0.078529  0.072735  0.073302  0.073871  0.074428  0.074956  
-14  0.079067  0.079223  0.072954  0.073621  0.074292  0.074956  0.075597  
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+1   0.065860  0.065299  0.058190  0.057786  0.057415  0.057076  0.056767  
+2   0.067729  0.067429  0.060003  0.059797  0.059597  0.059406  0.059226  
+3   0.072633  0.072489  0.065359  0.065273  0.065186  0.065101  0.065024  
+4   0.073627  0.073634  0.066349  0.066380  0.066395  0.066402  0.066406  
+5   0.074407  0.074548  0.067149  0.067284  0.067392  0.067482  0.067560  
+6   0.069521  0.069717  0.063511  0.063684  0.063832  0.063965  0.064087  
+7   0.070054  0.070342  0.064061  0.064307  0.064521  0.064713  0.064889  
+8   0.070496  0.070868  0.064530  0.064841  0.065115  0.065361  0.065588  
+9   0.070868  0.071315  0.064933  0.065304  0.065633  0.065930  0.066204  
+10  0.064530  0.064933  0.059711  0.060043  0.060340  0.060612  0.060864  
+11  0.064841  0.065304  0.060043  0.060422  0.060764  0.061076  0.061367  
+12  0.065115  0.065633  0.060340  0.060764  0.061146  0.061496  0.061822  
+13  0.065361  0.065930  0.060612  0.061076  0.061496  0.061882  0.062242  
+14  0.065588  0.066204  0.060864  0.061367  0.061822  0.062242  0.062634  
 </pre></div>
 </div>
 </div>

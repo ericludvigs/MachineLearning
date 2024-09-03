@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -635,6 +528,37 @@ Gaussian distribution.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotFoundError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">time</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">image</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">File</span> <span class="o">~/</span><span class="n">miniforge3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">myenv</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">tensorflow</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">443</span>
+<span class="g g-Whitespace">    </span><span class="mi">441</span> <span class="n">_plugin_dir</span> <span class="o">=</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">_s</span><span class="p">,</span> <span class="s1">&#39;tensorflow-plugins&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span> <span class="k">if</span> <span class="n">_os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">_plugin_dir</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">443</span>   <span class="n">_ll</span><span class="o">.</span><span class="n">load_library</span><span class="p">(</span><span class="n">_plugin_dir</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">444</span>   <span class="c1"># Load Pluggable Device Library</span>
+<span class="g g-Whitespace">    </span><span class="mi">445</span>   <span class="n">_ll</span><span class="o">.</span><span class="n">load_pluggable_device_library</span><span class="p">(</span><span class="n">_plugin_dir</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/tensorflow/python/framework/load_library.py:151,</span> in <span class="ni">load_library</span><span class="nt">(library_location)</span>
+<span class="g g-Whitespace">    </span><span class="mi">148</span>     <span class="n">kernel_libraries</span> <span class="o">=</span> <span class="p">[</span><span class="n">library_location</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span>   <span class="k">for</span> <span class="n">lib</span> <span class="ow">in</span> <span class="n">kernel_libraries</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">151</span>     <span class="n">py_tf</span><span class="o">.</span><span class="n">TF_LoadLibrary</span><span class="p">(</span><span class="n">lib</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">153</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">154</span>   <span class="k">raise</span> <span class="ne">OSError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">155</span>       <span class="n">errno</span><span class="o">.</span><span class="n">ENOENT</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">156</span>       <span class="s1">&#39;The file or folder to load kernel libraries from does not exist.&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">157</span>       <span class="n">library_location</span><span class="p">)</span>
+
+<span class="ne">NotFoundError</span>: dlopen(/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/tensorflow-plugins/libmetal_plugin.dylib, 0x0006): symbol not found in flat namespace &#39;_TF_GetInputPropertiesList&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>Next we define functions, for ease of use later, to generate Gaussians and to
 set up our toy data set.</p>
@@ -691,9 +615,6 @@ set up our toy data set.</p>
 <span class="n">data</span> <span class="o">=</span> <span class="n">generate_simple_clustering_dataset</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/clustering_17_0.png" src="_images/clustering_17_0.png" />
 </div>
 </div>
 <p>With the above dataset we start
@@ -755,9 +676,6 @@ implementing the <span class="math notranslate nohighlight">\(k\)</span>-means a
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/clustering_20_0.png" src="_images/clustering_20_0.png" />
-</div>
 </div>
 <p>So what do we have so far? We have ‘picked’ <span class="math notranslate nohighlight">\(k\)</span> centroids at random from our
 data points. There are other ways of more intelligently choosing their
@@ -818,11 +736,6 @@ or a maximum amount of iterations.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Converged at iteration 5
-</pre></div>
-</div>
-</div>
 </div>
 <p>We now have a simple , un-optimized <span class="math notranslate nohighlight">\(k\)</span>-means
 clustering implementation. Lets plot the final result</p>
@@ -843,9 +756,6 @@ clustering implementation. Lets plot the final result</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/clustering_24_0.png" src="_images/clustering_24_0.png" />
 </div>
 </div>
 <div class="cell docutils container">

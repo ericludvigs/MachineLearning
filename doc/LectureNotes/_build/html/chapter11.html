@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -1519,15 +1412,11 @@ g(t) = \frac{Ag_0}{g_0 + (A - g_0)\exp(-\alpha A t)}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial cost: 0.221805
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3245: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
-  return asarray(a).size
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final cost: 0.000417932
 The max absolute difference between the solutions is: 0.00424909
 </pre></div>
 </div>
-<img alt="_images/chapter11_58_3.png" src="_images/chapter11_58_3.png" />
+<img alt="_images/chapter11_58_2.png" src="_images/chapter11_58_2.png" />
 </div>
 </div>
 </div>
@@ -1650,18 +1539,14 @@ extending the program that uses the network using Autograd:</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial cost: 0.221805
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3245: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
-  return asarray(a).size
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final cost: 0.000417932
 The max absolute difference between the solutions is: 0.00424909
 Max absolute difference between Euler method and analytical: 0.011225
 Max absolute difference between deep neural network and analytical: 0.00424909
 </pre></div>
 </div>
+<img alt="_images/chapter11_66_2.png" src="_images/chapter11_66_2.png" />
 <img alt="_images/chapter11_66_3.png" src="_images/chapter11_66_3.png" />
-<img alt="_images/chapter11_66_4.png" src="_images/chapter11_66_4.png" />
 </div>
 </div>
 </div>
@@ -1872,15 +1757,11 @@ g(x) = x(1 - x)\exp(x)
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial cost: 457.256
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3245: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
-  return asarray(a).size
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final cost: 0.00310113
 The max absolute difference between the solutions is: 0.000464088
 </pre></div>
 </div>
-<img alt="_images/chapter11_79_3.png" src="_images/chapter11_79_3.png" />
+<img alt="_images/chapter11_79_2.png" src="_images/chapter11_79_2.png" />
 </div>
 </div>
 <div class="section" id="comparing-with-a-numerical-scheme">
@@ -2162,17 +2043,13 @@ f(x_{N_x - 2})
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial cost: 457.256
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3245: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
-  return asarray(a).size
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Final cost: 0.00310113
 The max absolute difference between the analytical solution and DNN Autograd: 0.000464088
 The max absolute difference between the analytical solution and numerical scheme: 0.00266858
 </pre></div>
 </div>
+<img alt="_images/chapter11_91_2.png" src="_images/chapter11_91_2.png" />
 <img alt="_images/chapter11_91_3.png" src="_images/chapter11_91_3.png" />
-<img alt="_images/chapter11_91_4.png" src="_images/chapter11_91_4.png" />
 </div>
 </div>
 </div>
@@ -2644,23 +2521,19 @@ Using TensorFlow results in a much better execution time. Try it!</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/numpy/core/fromnumeric.py:3245: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray.
-  return asarray(a).size
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial cost:  41.05505310046363
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="nn">Input In [9],</span> in <span class="ni">&lt;cell line: 129&gt;</span><span class="nt">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">143</span>
 <span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="n">num_iter</span> <span class="o">=</span> <span class="mi">250</span>
 <span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="n">lmb</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="ne">--&gt; </span><span class="mi">143</span> <span class="n">P</span> <span class="o">=</span> <span class="n">solve_pde_deep_neural_network</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">,</span> <span class="n">num_hidden_neurons</span><span class="p">,</span> <span class="n">num_iter</span><span class="p">,</span> <span class="n">lmb</span><span class="p">)</span>
 <span class="g g-Whitespace">    </span><span class="mi">145</span> <span class="c1">## Store the results</span>
 <span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="n">g_dnn_ag</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">Nx</span><span class="p">,</span> <span class="n">Nt</span><span class="p">))</span>
 
-<span class="nn">Input In [9],</span> in <span class="ni">solve_pde_deep_neural_network</span><span class="nt">(x, t, num_neurons, num_iter, lmb)</span>
+<span class="nn">Cell In[9], line 120,</span> in <span class="ni">solve_pde_deep_neural_network</span><span class="nt">(x, t, num_neurons, num_iter, lmb)</span>
 <span class="g g-Whitespace">    </span><span class="mi">118</span> <span class="c1"># Let the update be done num_iter times</span>
 <span class="g g-Whitespace">    </span><span class="mi">119</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_iter</span><span class="p">):</span>
 <span class="ne">--&gt; </span><span class="mi">120</span>     <span class="n">cost_grad</span> <span class="o">=</span>  <span class="n">cost_function_grad</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">x</span> <span class="p">,</span> <span class="n">t</span><span class="p">)</span>
@@ -2672,20 +2545,123 @@ Using TensorFlow results in a much better execution time. Try it!</p>
 <span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">argnum</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">20</span> <span class="k">return</span> <span class="n">unary_operator</span><span class="p">(</span><span class="n">unary_f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">nary_op_args</span><span class="p">,</span> <span class="o">**</span><span class="n">nary_op_kwargs</span><span class="p">)</span>
 
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/differential_operators.py:29,</span> in <span class="ni">grad</span><span class="nt">(fun, x)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">vspace</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Grad only applies to real scalar-output functions. &quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>                     <span class="s2">&quot;Try jacobian, elementwise_grad or holomorphic_grad.&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">29</span> <span class="k">return</span> <span class="n">vjp</span><span class="p">(</span><span class="n">vspace</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span><span class="o">.</span><span class="n">ones</span><span class="p">())</span>
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/differential_operators.py:28,</span> in <span class="ni">grad</span><span class="nt">(fun, x)</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="nd">@unary_to_nary</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span><span class="sd">     Returns a function which computes the gradient of `fun` with respect to</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span><span class="sd">     positional argument number `argnum`. The returned function takes the same</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span><span class="sd">     arguments as `fun`, but returns the gradient instead. The function `fun`</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span><span class="sd">     should be scalar-valued. The gradient has the same type as the argument.&quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">28</span>     <span class="n">vjp</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">_make_vjp</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">vspace</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Grad only applies to real scalar-output functions. &quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>                         <span class="s2">&quot;Try jacobian, elementwise_grad or holomorphic_grad.&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:10,</span> in <span class="ni">make_vjp</span><span class="nt">(fun, x)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">def</span> <span class="nf">make_vjp</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">start_node</span> <span class="o">=</span> <span class="n">VJPNode</span><span class="o">.</span><span class="n">new_root</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">end_value</span><span class="p">,</span> <span class="n">end_node</span> <span class="o">=</span>  <span class="n">trace</span><span class="p">(</span><span class="n">start_node</span><span class="p">,</span> <span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">if</span> <span class="n">end_node</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="k">def</span> <span class="nf">vjp</span><span class="p">(</span><span class="n">g</span><span class="p">):</span> <span class="k">return</span> <span class="n">vspace</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">zeros</span><span class="p">()</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/tracer.py:10,</span> in <span class="ni">trace</span><span class="nt">(start_node, fun, x)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">with</span> <span class="n">trace_stack</span><span class="o">.</span><span class="n">new_trace</span><span class="p">()</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">start_box</span> <span class="o">=</span> <span class="n">new_box</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">start_node</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">end_box</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="n">start_box</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">if</span> <span class="n">isbox</span><span class="p">(</span><span class="n">end_box</span><span class="p">)</span> <span class="ow">and</span> <span class="n">end_box</span><span class="o">.</span><span class="n">_trace</span> <span class="o">==</span> <span class="n">start_box</span><span class="o">.</span><span class="n">_trace</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="k">return</span> <span class="n">end_box</span><span class="o">.</span><span class="n">_value</span><span class="p">,</span> <span class="n">end_box</span><span class="o">.</span><span class="n">_node</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/wrap_util.py:15,</span> in <span class="ni">unary_to_nary.&lt;locals&gt;.nary_operator.&lt;locals&gt;.nary_f.&lt;locals&gt;.unary_f</span><span class="nt">(x)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">subargs</span> <span class="o">=</span> <span class="n">subvals</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">argnum</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="k">return</span> <span class="n">fun</span><span class="p">(</span><span class="o">*</span><span class="n">subargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">Cell In[9], line 79,</span> in <span class="ni">cost_function</span><span class="nt">(P, x, t)</span>
+<span class="g g-Whitespace">     </span><span class="mi">76</span> <span class="n">point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x_</span><span class="p">,</span><span class="n">t_</span><span class="p">])</span>
+<span class="g g-Whitespace">     </span><span class="mi">78</span> <span class="n">g_t</span> <span class="o">=</span> <span class="n">g_trial</span><span class="p">(</span><span class="n">point</span><span class="p">,</span><span class="n">P</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">79</span> <span class="n">g_t_jacobian</span> <span class="o">=</span> <span class="n">g_t_jacobian_func</span><span class="p">(</span><span class="n">point</span><span class="p">,</span><span class="n">P</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">80</span> <span class="n">g_t_hessian</span> <span class="o">=</span> <span class="n">g_t_hessian_func</span><span class="p">(</span><span class="n">point</span><span class="p">,</span><span class="n">P</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span> <span class="n">g_t_dt</span> <span class="o">=</span> <span class="n">g_t_jacobian</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/wrap_util.py:20,</span> in <span class="ni">unary_to_nary.&lt;locals&gt;.nary_operator.&lt;locals&gt;.nary_f</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">argnum</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">20</span> <span class="k">return</span> <span class="n">unary_operator</span><span class="p">(</span><span class="n">unary_f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">nary_op_args</span><span class="p">,</span> <span class="o">**</span><span class="n">nary_op_kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/differential_operators.py:64,</span> in <span class="ni">jacobian</span><span class="nt">(fun, x)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="n">jacobian_shape</span> <span class="o">=</span> <span class="n">ans_vspace</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="n">vspace</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">shape</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="n">grads</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">vjp</span><span class="p">,</span> <span class="n">ans_vspace</span><span class="o">.</span><span class="n">standard_basis</span><span class="p">())</span>
+<span class="ne">---&gt; </span><span class="mi">64</span> <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">stack</span><span class="p">(</span><span class="n">grads</span><span class="p">),</span> <span class="n">jacobian_shape</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/numpy/numpy_wrapper.py:88,</span> in <span class="ni">stack</span><span class="nt">(arrays, axis)</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span> <span class="k">def</span> <span class="nf">stack</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>     <span class="c1"># this code is basically copied from numpy/core/shape_base.py&#39;s stack</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="c1"># we need it here because we want to re-implement stack in terms of the</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="c1"># primitives defined in this file</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>     <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">arrays</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;need at least one array to stack&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/numpy/numpy_wrapper.py:88,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">     </span><span class="mi">83</span> <span class="k">def</span> <span class="nf">stack</span><span class="p">(</span><span class="n">arrays</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>     <span class="c1"># this code is basically copied from numpy/core/shape_base.py&#39;s stack</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>     <span class="c1"># we need it here because we want to re-implement stack in terms of the</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="c1"># primitives defined in this file</span>
+<span class="ne">---&gt; </span><span class="mi">88</span>     <span class="n">arrays</span> <span class="o">=</span> <span class="p">[</span><span class="n">array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="k">for</span> <span class="n">arr</span> <span class="ow">in</span> <span class="n">arrays</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">89</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">arrays</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">90</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;need at least one array to stack&#39;</span><span class="p">)</span>
 
 <span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:14,</span> in <span class="ni">make_vjp.&lt;locals&gt;.vjp</span><span class="nt">(g)</span>
 <span class="ne">---&gt; </span><span class="mi">14</span> <span class="k">def</span> <span class="nf">vjp</span><span class="p">(</span><span class="n">g</span><span class="p">):</span> <span class="k">return</span> <span class="n">backward_pass</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">end_node</span><span class="p">)</span>
 
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:23,</span> in <span class="ni">backward_pass</span><span class="nt">(g, end_node)</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">ingrads</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">vjp</span><span class="p">(</span><span class="n">outgrad</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:21,</span> in <span class="ni">backward_pass</span><span class="nt">(g, end_node)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">toposort</span><span class="p">(</span><span class="n">end_node</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">outgrad</span> <span class="o">=</span> <span class="n">outgrads</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">21</span>     <span class="n">ingrads</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">vjp</span><span class="p">(</span><span class="n">outgrad</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="k">for</span> <span class="n">parent</span><span class="p">,</span> <span class="n">ingrad</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">parents</span><span class="p">,</span> <span class="n">ingrads</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">23</span>         <span class="n">outgrads</span><span class="p">[</span><span class="n">parent</span><span class="p">]</span> <span class="o">=</span> <span class="n">add_outgrads</span><span class="p">(</span><span class="n">outgrads</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parent</span><span class="p">),</span> <span class="n">ingrad</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span> <span class="k">return</span> <span class="n">outgrad</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>         <span class="n">outgrads</span><span class="p">[</span><span class="n">parent</span><span class="p">]</span> <span class="o">=</span> <span class="n">add_outgrads</span><span class="p">(</span><span class="n">outgrads</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">parent</span><span class="p">),</span> <span class="n">ingrad</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:67,</span> in <span class="ni">defvjp.&lt;locals&gt;.vjp_argnums.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(g)</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span>         <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span>             <span class="s2">&quot;VJP of </span><span class="si">{}</span><span class="s2"> wrt argnum 0 not defined&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fun</span><span class="o">.</span><span class="vm">__name__</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="n">vjp</span> <span class="o">=</span> <span class="n">vjpfun</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">67</span>     <span class="k">return</span> <span class="k">lambda</span> <span class="n">g</span><span class="p">:</span> <span class="p">(</span><span class="n">vjp</span><span class="p">(</span><span class="n">g</span><span class="p">),)</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="k">elif</span> <span class="n">L</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span>     <span class="n">argnum_0</span><span class="p">,</span> <span class="n">argnum_1</span> <span class="o">=</span> <span class="n">argnums</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/numpy/numpy_vjps.py:660,</span> in <span class="ni">unbroadcast_f.&lt;locals&gt;.&lt;lambda&gt;</span><span class="nt">(g)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">def</span> <span class="nf">unbroadcast_f</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">659</span>     <span class="n">target_meta</span> <span class="o">=</span> <span class="n">anp</span><span class="o">.</span><span class="n">metadata</span><span class="p">(</span><span class="n">target</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">660</span>     <span class="k">return</span> <span class="k">lambda</span> <span class="n">g</span><span class="p">:</span> <span class="n">unbroadcast</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">g</span><span class="p">),</span> <span class="n">target_meta</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/numpy/numpy_vjps.py:653,</span> in <span class="ni">unbroadcast</span><span class="nt">(x, target_meta, broadcast_idx)</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span> <span class="k">for</span> <span class="n">axis</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">target_shape</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>     <span class="k">if</span> <span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">653</span>         <span class="n">x</span> <span class="o">=</span> <span class="n">anp</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span> <span class="k">if</span> <span class="n">anp</span><span class="o">.</span><span class="n">iscomplexobj</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">target_iscomplex</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>     <span class="n">x</span> <span class="o">=</span> <span class="n">anp</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/tracer.py:45,</span> in <span class="ni">primitive.&lt;locals&gt;.f_wrapped</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="n">argnums</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">argnum</span>    <span class="k">for</span> <span class="n">argnum</span><span class="p">,</span> <span class="n">_</span>   <span class="ow">in</span> <span class="n">boxed_args</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span>     <span class="n">ans</span> <span class="o">=</span> <span class="n">f_wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">argvals</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">45</span>     <span class="n">node</span> <span class="o">=</span> <span class="n">node_constructor</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">f_wrapped</span><span class="p">,</span> <span class="n">argvals</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">argnums</span><span class="p">,</span> <span class="n">parents</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="k">return</span> <span class="n">new_box</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">trace</span><span class="p">,</span> <span class="n">node</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:36,</span> in <span class="ni">VJPNode.__init__</span><span class="nt">(self, value, fun, args, kwargs, parent_argnums, parents)</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>     <span class="n">fun_name</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="s1">&#39;__name__&#39;</span><span class="p">,</span> <span class="n">fun</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;VJP of </span><span class="si">{}</span><span class="s2"> wrt argnums </span><span class="si">{}</span><span class="s2"> not defined&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span>                               <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fun_name</span><span class="p">,</span> <span class="n">parent_argnums</span><span class="p">))</span>
+<span class="ne">---&gt; </span><span class="mi">36</span> <span class="bp">self</span><span class="o">.</span><span class="n">vjp</span> <span class="o">=</span> <span class="n">vjpmaker</span><span class="p">(</span><span class="n">parent_argnums</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:56,</span> in <span class="ni">defvjp.&lt;locals&gt;.vjp_argnums</span><span class="nt">(argnums, ans, args, kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="n">argnums</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;argnums&#39;</span><span class="p">,</span> <span class="n">count</span><span class="p">())</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="n">vjps_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">argnum</span> <span class="p">:</span> <span class="n">translate_vjp</span><span class="p">(</span><span class="n">vjpmaker</span><span class="p">,</span> <span class="n">fun</span><span class="p">,</span> <span class="n">argnum</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span>              <span class="k">for</span> <span class="n">argnum</span><span class="p">,</span> <span class="n">vjpmaker</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">argnums</span><span class="p">,</span> <span class="n">vjpmakers</span><span class="p">)}</span>
+<span class="ne">---&gt; </span><span class="mi">56</span> <span class="k">def</span> <span class="nf">vjp_argnums</span><span class="p">(</span><span class="n">argnums</span><span class="p">,</span> <span class="n">ans</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="n">L</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">argnums</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="c1"># These first two cases are just optimizations</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>

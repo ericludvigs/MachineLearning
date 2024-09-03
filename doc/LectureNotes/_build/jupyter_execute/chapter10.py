@@ -1115,7 +1115,6 @@ X_train, X_test, Y_train, Y_test = train_test_split(inputs, labels, train_size=t
 # In[17]:
 
 
-
 epochs = 100
 batch_size = 100
 n_neurons_layer1 = 100
@@ -1194,7 +1193,6 @@ plt.show()
 # ## The Breast Cancer Data, now with Keras
 
 # In[20]:
-
 
 
 import tensorflow as tf

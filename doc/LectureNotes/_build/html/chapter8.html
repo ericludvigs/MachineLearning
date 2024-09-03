@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -786,10 +679,10 @@ covariance matrix through the <strong>np.linalg.eig()</strong> function.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.06776308367941637
-4.128711548693024
-[[0.73875685 2.21831419]
- [2.21831419 7.61137175]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.046842629321028326
+3.909446359461397
+[[0.76681867 2.32238906]
+ [2.32238906 8.10983159]]
 </pre></div>
 </div>
 </div>
@@ -829,10 +722,10 @@ a more brute force way. Here we scale the mean values for each column of the des
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.07327275854723572
-1.4831993814276723
-[[1.         0.63304358]
- [0.63304358 1.        ]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0798590438380667
+1.270350130579073
+[[1.         0.58734026]
+ [0.58734026 1.        ]]
 </pre></div>
 </div>
 </div>
@@ -861,30 +754,30 @@ this matrix we easily see that it is a positive definite matrix.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.85835723 -3.41774143]
- [ 1.61213079  4.0877162 ]
- [ 0.45424136  1.21829201]
- [-1.21728232 -4.60356071]
- [-0.22144968  1.11721416]
- [-2.47068328 -7.69488259]
- [ 0.99346318  3.77312796]
- [-0.18802913 -0.87085636]
- [ 2.10355817  6.71082182]
- [-0.20759186 -0.32013106]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.34565973 -1.4704785 ]
+ [-0.29669702 -0.75437273]
+ [ 1.05100602  2.13022421]
+ [ 0.40103689  3.11022072]
+ [ 0.01591047 -0.05087888]
+ [-0.89261577 -1.74947597]
+ [-0.21796226 -0.62901905]
+ [-0.5961905  -2.9242511 ]
+ [ 0.39428522  1.65208925]
+ [ 0.48688666  0.68594205]]
           0         1
-0 -0.858357 -3.417741
-1  1.612131  4.087716
-2  0.454241  1.218292
-3 -1.217282 -4.603561
-4 -0.221450  1.117214
-5 -2.470683 -7.694883
-6  0.993463  3.773128
-7 -0.188029 -0.870856
-8  2.103558  6.710822
-9 -0.207592 -0.320131
-          0         1
-0  1.000000  0.982252
-1  0.982252  1.000000
+0 -0.345660 -1.470478
+1 -0.296697 -0.754373
+2  1.051006  2.130224
+3  0.401037  3.110221
+4  0.015910 -0.050879
+5 -0.892616 -1.749476
+6 -0.217962 -0.629019
+7 -0.596190 -2.924251
+8  0.394285  1.652089
+9  0.486887  0.685942
+         0        1
+0  1.00000  0.87078
+1  0.87078  1.00000
 </pre></div>
 </div>
 </div>
@@ -941,37 +834,37 @@ this matrix we easily see that it is a positive definite matrix.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     0         1         2         3         4         5         6         7   \
 0   0.0  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000   
-1   0.0  0.093096  0.078035  0.092051  0.085918  0.079156  0.082615  0.078445   
-2   0.0  0.078035  0.067042  0.077110  0.072585  0.067659  0.069711  0.066564   
-3   0.0  0.092051  0.077110  0.096788  0.090301  0.083242  0.090313  0.085815   
-4   0.0  0.085918  0.072585  0.090301  0.084631  0.078425  0.084457  0.080543   
-5   0.0  0.079156  0.067659  0.083242  0.078425  0.073141  0.078154  0.074826   
-6   0.0  0.082615  0.069711  0.090313  0.084457  0.078154  0.086511  0.082368   
-7   0.0  0.078445  0.066564  0.085815  0.080543  0.074826  0.082368  0.078667   
-8   0.0  0.074411  0.063533  0.081472  0.076756  0.071602  0.078379  0.075092   
-9   0.0  0.070370  0.060524  0.077146  0.072971  0.068378  0.074425  0.071535   
-10  0.0  0.073425  0.062485  0.082390  0.077304  0.071857  0.080383  0.076734   
-11  0.0  0.070072  0.059925  0.078744  0.074128  0.069148  0.076993  0.073706   
-12  0.0  0.066944  0.057537  0.075342  0.071160  0.066614  0.073828  0.070876   
-13  0.0  0.064000  0.055294  0.072140  0.068364  0.064224  0.070852  0.068211   
-14  0.0  0.061186  0.053157  0.069084  0.065690  0.061938  0.068017  0.065666   
+1   0.0  0.078785  0.081798  0.081422  0.083540  0.085693  0.075398  0.077082   
+2   0.0  0.081798  0.085346  0.084157  0.086550  0.088986  0.077522  0.079381   
+3   0.0  0.081422  0.084157  0.090290  0.092347  0.094426  0.087176  0.088908   
+4   0.0  0.083540  0.086550  0.092347  0.094577  0.096837  0.088893  0.090751   
+5   0.0  0.085693  0.088986  0.094426  0.096837  0.099287  0.090623  0.092613   
+6   0.0  0.075398  0.077522  0.087176  0.088893  0.090623  0.086538  0.088061   
+7   0.0  0.077082  0.079381  0.088908  0.090751  0.092613  0.088061  0.089682   
+8   0.0  0.078824  0.081308  0.090696  0.092672  0.094671  0.089629  0.091353   
+9   0.0  0.080630  0.083309  0.092544  0.094659  0.096803  0.091246  0.093078   
+10  0.0  0.068605  0.070202  0.081597  0.082978  0.084362  0.082661  0.083943   
+11  0.0  0.070006  0.071729  0.083096  0.084574  0.086059  0.084022  0.085383   
+12  0.0  0.071462  0.073318  0.084650  0.086230  0.087822  0.085431  0.086875   
+13  0.0  0.072976  0.074973  0.086263  0.087951  0.089654  0.086890  0.088422   
+14  0.0  0.074552  0.076697  0.087938  0.089739  0.091561  0.088402  0.090025   
 
           8         9         10        11        12        13        14  
 0   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  
-1   0.074411  0.070370  0.073425  0.070072  0.066944  0.064000  0.061186  
-2   0.063533  0.060524  0.062485  0.059925  0.057537  0.055294  0.053157  
-3   0.081472  0.077146  0.082390  0.078744  0.075342  0.072140  0.069084  
-4   0.076756  0.072971  0.077304  0.074128  0.071160  0.068364  0.065690  
-5   0.071602  0.068378  0.071857  0.069148  0.066614  0.064224  0.061938  
-6   0.078379  0.074425  0.080383  0.076993  0.073828  0.070852  0.068017  
-7   0.075092  0.071535  0.076734  0.073706  0.070876  0.068211  0.065666  
-8   0.071908  0.068726  0.073223  0.070535  0.068019  0.065645  0.063374  
-9   0.068726  0.065909  0.069753  0.067388  0.065171  0.063076  0.061068  
-10  0.073223  0.069753  0.075692  0.072679  0.069865  0.067220  0.064702  
-11  0.070535  0.067388  0.072679  0.069968  0.067433  0.065045  0.062768  
-12  0.068019  0.065171  0.069865  0.067433  0.065155  0.063006  0.060952  
-13  0.065645  0.063076  0.067220  0.065045  0.063006  0.061078  0.059232  
-14  0.063374  0.061068  0.064702  0.062768  0.060952  0.059232  0.057582  
+1   0.078824  0.080630  0.068605  0.070006  0.071462  0.072976  0.074552  
+2   0.081308  0.083309  0.070202  0.071729  0.073318  0.074973  0.076697  
+3   0.090696  0.092544  0.081597  0.083096  0.084650  0.086263  0.087938  
+4   0.092672  0.094659  0.082978  0.084574  0.086230  0.087951  0.089739  
+5   0.094671  0.096803  0.084362  0.086059  0.087822  0.089654  0.091561  
+6   0.089629  0.091246  0.082661  0.084022  0.085431  0.086890  0.088402  
+7   0.091353  0.093078  0.083943  0.085383  0.086875  0.088422  0.090025  
+8   0.093132  0.094970  0.085259  0.086782  0.088361  0.090000  0.091700  
+9   0.094970  0.096928  0.086611  0.088222  0.089892  0.091627  0.093429  
+10  0.085259  0.086611  0.080195  0.081374  0.082592  0.083851  0.085152  
+11  0.086782  0.088222  0.081374  0.082619  0.083906  0.085237  0.086615  
+12  0.088361  0.089892  0.082592  0.083906  0.085265  0.086673  0.088130  
+13  0.090000  0.091627  0.083851  0.085237  0.086673  0.088160  0.089702  
+14  0.091700  0.093429  0.085152  0.086615  0.088130  0.089702  0.091331  
 </pre></div>
 </div>
 </div>
@@ -1160,10 +1053,10 @@ We can write our own code or simply use either the functionaly of <strong>numpy<
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          0         1
-0  3.959839  1.973209
-1  1.973209  1.963889
-[[3.95983949 1.97320866]
- [1.97320866 1.96388867]]
+0  4.034057  2.045548
+1  2.045548  2.024217
+[[4.03405654 2.04554803]
+ [2.04554803 2.02421742]]
 </pre></div>
 </div>
 </div>
@@ -1190,8 +1083,8 @@ Our own code here is not very elegant and asks for obvious improvements. It is t
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Centered covariance using own code
-[[3.95983949 1.97320866]
- [1.97320866 1.96388867]]
+[[4.03405654 2.04554803]
+ [2.04554803 2.02421742]]
 </pre></div>
 </div>
 <img alt="_images/chapter8_65_1.png" src="_images/chapter8_65_1.png" />
@@ -1251,16 +1144,16 @@ questions.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues of Covariance matrix
-5.173087120899479
-0.7506410412799234
+5.30820040103372
+0.7500735612987705
 First eigenvector
-[0.85185762 0.52377342]
+[0.84880366 0.52870818]
 Second eigenvector
-[-0.52377342  0.85185762]
+[-0.52870818  0.84880366]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvector of largest eigenvalue
-[-0.85185762 -0.52377342]
+[-0.84880366 -0.52870818]
 </pre></div>
 </div>
 </div>
@@ -1601,11 +1494,13 @@ Here we compute performance scores on the training data using logistic regressio
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train set accuracy from Logistic Regression: 0.95
-Train set accuracy scaled data: 0.99
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Train set accuracy scaled data: 0.99
 Train set accuracy scaled and PCA data: 0.96
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:814: ConvergenceWarning: lbfgs failed to converge (status=1):
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
 STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
 
 Increase the number of iterations (max_iter) or scale the data as shown in:

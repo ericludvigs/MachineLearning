@@ -734,7 +734,6 @@ y = 4+3*x+np.random.randn(m,1)
 # In[7]:
 
 
-
 # Importing various packages
 from random import random, seed
 import numpy as np

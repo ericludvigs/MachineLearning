@@ -112,7 +112,6 @@ plt.show()
 # In[2]:
 
 
-
 # For matrices and calculations
 import numpy as np
 # For machine learning (backend for keras)

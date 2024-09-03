@@ -275,114 +275,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week36.html">
-   Week 36: Statistical interpretation of Linear Regression and Resampling techniques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek37.html">
-   Exercises week 37
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week37.html">
-   Week 37: Statistical interpretations and Resampling Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek38.html">
-   Exercises week 38
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week38.html">
-   Week 38: Logistic Regression and Optimization
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek39.html">
-   Exercises week 39
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week39.html">
-   Week 39: Optimization and  Gradient Methods
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week40.html">
-   Week 40: Gradient descent methods (continued) and start Neural networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek41.html">
-   Exercises week 41
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week41.html">
-   Week 41 Neural networks and constructing a neural network code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek42.html">
-   Exercises week 42
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week42.html">
-   Week 42 Constructing a Neural Network code with introduction to Tensor flow
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek43.html">
-   Exercises weeks 43 and 44
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week43.html">
-   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week44.html">
-   Week 44,  Convolutional Neural Networks (CNN)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week45.html">
-   Week 45,  Recurrent Neural Networks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week46.html">
-   Week 46: Decision Trees, Ensemble methods  and Random Forests
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week47.html">
-   Week 47: From Decision Trees to Ensemble Methods, Random Forests and Boosting Methods   and Summary of Course
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="exercisesweek47.html">
-   Exercise week 47
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Projects
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="project1.html">
-   Project 1 on Machine Learning, deadline October 9 (midnight), 2023
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="project2.html">
-   Project 2 on Machine Learning, deadline November 17 (Midnight)
+   Week 36: Linear Rgeression and Statistical interpretations
   </a>
  </li>
 </ul>
@@ -1082,14 +975,21 @@ which equals</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_15458/483257001.py:18: MatplotlibDeprecationWarning: Calling gca() with keyword arguments was deprecated in Matplotlib 3.4. Starting two minor releases later, gca() will take no keyword arguments. The gca() function should only be used to get the current axes, or if no axes exist, create new axes with default keyword arguments. To create a new axes with non-default arguments, use plt.axes() or plt.subplot().
-  ax = fig.gca(projection=&quot;3d&quot;)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">18</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">18</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s2">&quot;3d&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">xmesh</span><span class="p">,</span> <span class="n">ymesh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">50</span><span class="n">j</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">50</span><span class="n">j</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">fmesh</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">xmesh</span><span class="p">,</span> <span class="n">ymesh</span><span class="p">]))</span>
+
+<span class="ne">TypeError</span>: gca() got an unexpected keyword argument &#39;projection&#39;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;mpl_toolkits.mplot3d.art3d.Poly3DCollection at 0x12463a760&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/chapteroptimization_61_2.png" src="_images/chapteroptimization_61_2.png" />
 </div>
 </div>
 <p>And then as countor plot</p>
@@ -1100,9 +1000,6 @@ which equals</p>
 <span class="n">guesses</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mf">2.</span><span class="o">/</span><span class="mi">5</span><span class="p">])]</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/chapteroptimization_63_0.png" src="_images/chapteroptimization_63_0.png" />
 </div>
 </div>
 <p>Find guesses</p>
@@ -1127,11 +1024,6 @@ which equals</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.33333333 -0.26666667]
-</pre></div>
-</div>
-</div>
 </div>
 <p>What happened?</p>
 <div class="cell docutils container">
@@ -1142,12 +1034,6 @@ which equals</p>
 <span class="n">pt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">it_array</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">it_array</span><span class="o">.</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;x-&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x127461970&gt;]
-</pre></div>
-</div>
-<img alt="_images/chapteroptimization_69_1.png" src="_images/chapteroptimization_69_1.png" />
 </div>
 </div>
 </div>
@@ -1400,16 +1286,6 @@ when <span class="math notranslate nohighlight">\(||\nabla_\beta C(\beta_k) || \
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.27151245 4.21908927]
-[[4.2144122 ]
- [2.86528733]]
-[[4.2144122 ]
- [2.86528733]]
-</pre></div>
-</div>
-<img alt="_images/chapteroptimization_123_1.png" src="_images/chapteroptimization_123_1.png" />
-</div>
 </div>
 <p>Alternatively, we can use <strong>Scikit-Learn</strong> as done here</p>
 <div class="cell docutils container">
@@ -1430,13 +1306,6 @@ when <span class="math notranslate nohighlight">\(||\nabla_\beta C(\beta_k) || \
 <span class="n">sgdreg</span> <span class="o">=</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="n">max_iter</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span> <span class="n">penalty</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">eta0</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 <span class="n">sgdreg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">ravel</span><span class="p">())</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sgdreg</span><span class="o">.</span><span class="n">intercept_</span><span class="p">,</span> <span class="n">sgdreg</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4.08838465]
- [3.00383795]]
-[4.10031273] [3.04626011]
 </pre></div>
 </div>
 </div>
@@ -1505,15 +1374,6 @@ C_{\text{ridge}}(\beta) = \frac{1}{n}||X\beta -\mathbf{y}||^2 + \lambda ||\beta|
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3.81243166]
- [3.07844345]]
-[[3.80101942]
- [3.08513055]]
-</pre></div>
-</div>
-<img alt="_images/chapteroptimization_132_1.png" src="_images/chapteroptimization_132_1.png" />
 </div>
 </div>
 </div>
@@ -1675,11 +1535,6 @@ function.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gamma_j after 500 epochs: 9.97108e-05
-</pre></div>
-</div>
-</div>
 </div>
 <p>We note that we have defined several hyperparameters. These are now the number of epochs, the number of mini-batches and the parameters <span class="math notranslate nohighlight">\(t_0\)</span> and <span class="math notranslate nohighlight">\(t_1\)</span>.</p>
 <div class="section" id="program-for-stochastic-gradient">
@@ -1757,21 +1612,6 @@ function.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[3.56486674]
- [3.29918458]]
-Eigenvalues of Hessian Matrix:[0.2756303  4.36170438]
-theta from own gd
-[[3.56486674]
- [3.29918458]]
-theta from own sdg
-[[3.52208436]
- [3.31774469]]
-</pre></div>
-</div>
-<img alt="_images/chapteroptimization_148_1.png" src="_images/chapteroptimization_148_1.png" />
 </div>
 </div>
 <p>In the above code, we have use replacement in setting up the
@@ -2079,12 +1919,6 @@ f'(x) = \cos\left(2\pi x + x^2\right)\left(2\pi + 2x\right)
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/chapteroptimization_188_0.png" src="_images/chapteroptimization_188_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The max absolute difference is: 1.77636e-15
-</pre></div>
-</div>
-</div>
 </div>
 <p>Here we
 experiment with what kind of functions Autograd is capable
@@ -2110,12 +1944,6 @@ experiment with other, possibly more complicated, functions as well.</p>
 <span class="c1"># Compare with the analytical derivative, that is f1&#39;(x) = 3*x**2 </span>
 <span class="n">grad_analytical</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The gradient of f1 evaluated at a = </span><span class="si">%g</span><span class="s2"> by finding the analytic expression is: </span><span class="si">%g</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">grad_analytical</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The gradient of f1 evaluated at a = 1 using autograd is: 3
-The gradient of f1 evaluated at a = 1 by finding the analytic expression is: 3
 </pre></div>
 </div>
 </div>
@@ -2161,17 +1989,6 @@ being differentiated with respect to.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Evaluating at x1 = 1, x2 = 3
-------------------------------
-The derivative of f2 w.r.t x1: 12
-The analytical derivative of f2 w.r.t x1: 12
-
-The derivative of f2 w.r.t x2: -4
-The analytical derivative of f2 w.r.t x2: -4
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that the grad function will not produce the true gradient of the function. The true gradient of a function with two or more variables will produce a vector, where each element is the function differentiated w.r.t a variable.</p>
 <div class="cell docutils container">
@@ -2193,12 +2010,6 @@ The analytical derivative of f2 w.r.t x2: -4
 
 <span class="c1"># Print the analytical gradient:</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The analytical gradient of f3 is: &quot;</span><span class="p">,</span> <span class="n">f3_grad_analytical</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The computed gradient of f3 is:  [ 2.  3.  5.  7. 88.]
-The analytical gradient of f3 is:  [ 2.  3.  5.  7. 88.]
 </pre></div>
 </div>
 </div>
@@ -2231,12 +2042,6 @@ could expect form a gradient-evaluting function.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The computed derivative of f4 at x = 2.7 is: 13.8759
-The analytical gradient of f4 at x = 2.7 is: 13.8759
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2254,11 +2059,6 @@ The analytical gradient of f4 at x = 2.7 is: 13.8759
 
 <span class="c1"># Print the computed derivative:</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The computed derivative of f5 at x = </span><span class="si">%g</span><span class="s2"> is: </span><span class="si">%g</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f5_grad</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The computed derivative of f5 at x = 2.7 is: 5.4
 </pre></div>
 </div>
 </div>
@@ -2292,12 +2092,6 @@ The analytical gradient of f4 at x = 2.7 is: 13.8759
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The computed derivative of f6_for at x = 0.5 is: 3.95703
-The computed derivative of f6_while at x = 0.5 is: 3.95703
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2310,11 +2104,6 @@ The computed derivative of f6_while at x = 0.5 is: 3.95703
     <span class="n">f6_grad_analytical</span> <span class="o">+=</span> <span class="n">i</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The analytical derivative of f6 at x = </span><span class="si">%g</span><span class="s2"> is: </span><span class="si">%g</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f6_grad_analytical</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The analytical derivative of f6 at x = 0.5 is: 3.95703
 </pre></div>
 </div>
 </div>
@@ -2351,12 +2140,6 @@ The computed derivative of f6_while at x = 0.5 is: 3.95703
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The computed derivative of f7 at n = 2 is: 1
-The analytical derivative of f7 at n = 2 is: 1
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that if n is equal to zero or one, Autograd will give an error message. This message appears when the output is independent on input.</p>
 <p>Autograd supports many features. However, there are some functions that is not supported (yet) by Autograd.</p>
@@ -2379,11 +2162,6 @@ The analytical derivative of f7 at n = 2 is: 1
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\nimport autograd.numpy as np\nfrom autograd import grad\ndef f8(x): # Assume x is an array\n    x[2] = 3\n    return x*2\n\nf8_grad = grad(f8)\n\nx = 8.4\n\nprint(&quot;The derivative of f8 is:&quot;,f8_grad(x))\n&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <p>Here, Autograd tells us that an ‘ArrayBox’ does not support item assignment. The item assignment is done when the program tries to assign x[2] to the value 3. However, Autograd has implemented the computation of the derivative such that this assignment is not possible.</p>
 <div class="cell docutils container">
@@ -2399,60 +2177,6 @@ The analytical derivative of f7 at n = 2 is: 1
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The derivative of f9 is:&quot;</span><span class="p">,</span><span class="n">f9_grad</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">Input In [23],</span> in <span class="ni">&lt;cell line: 11&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">f9_grad</span> <span class="o">=</span> <span class="n">grad</span><span class="p">(</span><span class="n">f9</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">])</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The derivative of f9 is:&quot;</span><span class="p">,</span><span class="n">f9_grad</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/wrap_util.py:20,</span> in <span class="ni">unary_to_nary.&lt;locals&gt;.nary_operator.&lt;locals&gt;.nary_f</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">x</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">argnum</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="k">return</span> <span class="n">unary_operator</span><span class="p">(</span><span class="n">unary_f</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">nary_op_args</span><span class="p">,</span> <span class="o">**</span><span class="n">nary_op_kwargs</span><span class="p">)</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/differential_operators.py:25,</span> in <span class="ni">grad</span><span class="nt">(fun, x)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="nd">@unary_to_nary</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span><span class="sd">     Returns a function which computes the gradient of `fun` with respect to</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span><span class="sd">     positional argument number `argnum`. The returned function takes the same</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span><span class="sd">     arguments as `fun`, but returns the gradient instead. The function `fun`</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span><span class="sd">     should be scalar-valued. The gradient has the same type as the argument.&quot;&quot;&quot;</span>
-<span class="ne">---&gt; </span><span class="mi">25</span>     <span class="n">vjp</span><span class="p">,</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">_make_vjp</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="k">if</span> <span class="ow">not</span> <span class="n">vspace</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span>         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;Grad only applies to real scalar-output functions. &quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span>                         <span class="s2">&quot;Try jacobian, elementwise_grad or holomorphic_grad.&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/core.py:10,</span> in <span class="ni">make_vjp</span><span class="nt">(fun, x)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">def</span> <span class="nf">make_vjp</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">start_node</span> <span class="o">=</span> <span class="n">VJPNode</span><span class="o">.</span><span class="n">new_root</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">end_value</span><span class="p">,</span> <span class="n">end_node</span> <span class="o">=</span>  <span class="n">trace</span><span class="p">(</span><span class="n">start_node</span><span class="p">,</span> <span class="n">fun</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">if</span> <span class="n">end_node</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="k">def</span> <span class="nf">vjp</span><span class="p">(</span><span class="n">g</span><span class="p">):</span> <span class="k">return</span> <span class="n">vspace</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">zeros</span><span class="p">()</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/tracer.py:10,</span> in <span class="ni">trace</span><span class="nt">(start_node, fun, x)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">with</span> <span class="n">trace_stack</span><span class="o">.</span><span class="n">new_trace</span><span class="p">()</span> <span class="k">as</span> <span class="n">t</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">start_box</span> <span class="o">=</span> <span class="n">new_box</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">start_node</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">end_box</span> <span class="o">=</span> <span class="n">fun</span><span class="p">(</span><span class="n">start_box</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">if</span> <span class="n">isbox</span><span class="p">(</span><span class="n">end_box</span><span class="p">)</span> <span class="ow">and</span> <span class="n">end_box</span><span class="o">.</span><span class="n">_trace</span> <span class="o">==</span> <span class="n">start_box</span><span class="o">.</span><span class="n">_trace</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="k">return</span> <span class="n">end_box</span><span class="o">.</span><span class="n">_value</span><span class="p">,</span> <span class="n">end_box</span><span class="o">.</span><span class="n">_node</span>
-
-<span class="nn">File ~/miniforge3/envs/myenv/lib/python3.9/site-packages/autograd/wrap_util.py:15,</span> in <span class="ni">unary_to_nary.&lt;locals&gt;.nary_operator.&lt;locals&gt;.nary_f.&lt;locals&gt;.unary_f</span><span class="nt">(x)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">subargs</span> <span class="o">=</span> <span class="n">subvals</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="nb">zip</span><span class="p">(</span><span class="n">argnum</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
-<span class="ne">---&gt; </span><span class="mi">15</span> <span class="k">return</span> <span class="n">fun</span><span class="p">(</span><span class="o">*</span><span class="n">subargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">Input In [23],</span> in <span class="ni">f9</span><span class="nt">(a)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">f9</span><span class="p">(</span><span class="n">a</span><span class="p">):</span> <span class="c1"># Assume a is an array with 2 elements</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">])</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="k">return</span> <span class="n">a</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-
-<span class="ne">AttributeError</span>: &#39;ArrayBox&#39; object has no attribute &#39;dot&#39;
 </pre></div>
 </div>
 </div>
