@@ -68,7 +68,23 @@ def linear_prediction(X: ArrayLike, beta: ArrayLike) -> ArrayLike:
     """
     y_tilde = X @ beta
 
-    return y_tilde   
+    return y_tilde
+
+def custom_mse(y_true: ArrayLike, y_pred: ArrayLike) -> float:
+    """ Calculates the mean squared error
+    """
+    n = len(y_true) # number of data points
+    mse = (1/n) * np.sum( (y_true - y_pred)**2 )
+    return mse 
+
+def custom_r2(y_true: ArrayLike, y_pred: ArrayLike) -> float:
+    """ Calculates the coefficient of determination R^2
+    """
+    n = len(y_true) # number of data points
+    y_mean = (1/n) * np.sum(y_true)
+    r2 =  1 - ((np.sum( (y_true - y_pred)**2) ) / (np.sum( (y_true - y_mean)**2 )))
+    return r2
+
 
 if __name__ == "__main__":
     fig = plt.figure()
