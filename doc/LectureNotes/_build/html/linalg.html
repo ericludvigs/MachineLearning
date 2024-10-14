@@ -308,6 +308,31 @@ const thebe_selector_output = ".output, .cell_output"
    Week 39: Optimization and  Gradient Methods
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week40.html">
+   Week 40: Gradient descent methods (continued) and start Neural networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek41.html">
+   Exercises week 41
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week41.html">
+   Week 41 Neural networks and constructing a neural network code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek42.html">
+   Exercises week 42
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week42.html">
+   Week 42 Constructing a Neural Network code with examples
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -318,6 +343,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="project1.html">
    Project 1 on Machine Learning, deadline October 7 (midnight), 2024
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project2.html">
+   Project 2 on Machine Learning, deadline November 4 (Midnight)
   </a>
  </li>
 </ul>
@@ -623,8 +653,8 @@ matrices and vectors.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.69465386  1.75956617 -0.23303727 -0.53125507  1.34598722 -1.09928714
-  1.37013105  0.79898903 -0.23663482  0.99427512]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.34851141  0.11232457 -0.59560497  0.79558423 -0.74632311  0.97068015
+  1.45921927  0.39225935 -0.87171492  0.44129766]
 </pre></div>
 </div>
 </div>
@@ -845,26 +875,36 @@ as (recall that we user lowercase letters for vectors and uppercase letters for 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.81947005 0.93619369 0.37449168 0.91933003 0.76855921 0.41820116
-  0.96853248 0.60375434 0.96015381 0.30269539]
- [0.46086448 0.16777789 0.9930742  0.10837392 0.69089532 0.94221383
-  0.53629564 0.50327198 0.33734605 0.04757138]
- [0.51069279 0.12363332 0.79171202 0.16791183 0.62617788 0.9288904
-  0.85112594 0.86519139 0.61192712 0.90842732]
- [0.82551764 0.67524588 0.02175561 0.1118933  0.42575338 0.45731379
-  0.61069681 0.40184681 0.18702469 0.71838601]
- [0.68655456 0.11747908 0.28253033 0.4591127  0.68072161 0.59372982
-  0.95343966 0.24780663 0.98740373 0.06808421]
- [0.99512017 0.14828178 0.02354386 0.90860768 0.891715   0.39039235
-  0.48151166 0.43563433 0.52657934 0.73176319]
- [0.77030637 0.00676256 0.37454707 0.5076963  0.51937727 0.46065811
-  0.65917558 0.72962885 0.99370678 0.92341148]
- [0.16292908 0.17214545 0.44995924 0.20367355 0.64885265 0.34225662
-  0.4215795  0.27933134 0.02552966 0.62908496]
- [0.8084934  0.51364117 0.4937346  0.05296475 0.69247718 0.56783103
-  0.85276538 0.52635761 0.96461948 0.67374815]
- [0.02137508 0.03177331 0.78186404 0.33096549 0.8423144  0.07745579
-  0.4619526  0.61414743 0.38460453 0.51928402]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[6.95039348e-01 4.77602426e-01 4.58218587e-02 7.93416236e-01
+  9.55643340e-01 7.98621772e-01 4.69806017e-01 1.11371176e-01
+  6.52359414e-01 4.86833907e-01]
+ [6.34549184e-01 4.06225028e-01 6.55208611e-01 1.10909182e-02
+  6.45609936e-01 2.42839645e-01 2.14335140e-01 4.88477745e-01
+  7.33046180e-01 3.04253288e-01]
+ [9.24911588e-01 6.09812323e-01 3.17886464e-01 8.85018556e-01
+  9.82435177e-01 9.43167881e-01 7.43951798e-01 7.31787864e-01
+  4.80369722e-01 8.57475388e-01]
+ [1.16436977e-01 8.00829346e-01 3.64493447e-01 4.94082113e-02
+  5.68163369e-01 4.84993546e-03 2.34121963e-01 2.49849206e-01
+  3.86274590e-01 8.78949699e-01]
+ [4.91568958e-01 9.21047414e-02 7.84745063e-01 6.96054705e-01
+  6.19052323e-02 8.28645331e-01 8.30191327e-01 2.48853875e-01
+  7.24382159e-01 3.97218946e-01]
+ [3.79942527e-01 1.36403018e-02 7.08949703e-02 5.98556486e-01
+  5.10274274e-01 5.86030593e-01 8.96762953e-02 9.27993904e-01
+  5.79873884e-01 4.12085937e-01]
+ [4.75733813e-01 3.83164611e-01 9.64968814e-01 2.10369090e-01
+  6.15338896e-04 5.29509520e-01 4.33492417e-01 9.06496916e-01
+  1.39646454e-01 4.21846767e-01]
+ [1.24848631e-01 9.48875568e-01 8.00598510e-01 4.10923006e-01
+  9.72407267e-01 9.52121734e-01 1.56665044e-01 5.06276815e-01
+  5.30196557e-01 8.40012736e-01]
+ [3.25145374e-01 1.83317854e-01 7.66763324e-02 9.66707072e-01
+  8.23006632e-01 4.30655251e-01 4.69811070e-02 8.72758060e-01
+  6.59088350e-01 7.28365323e-01]
+ [5.96282505e-01 9.69432059e-01 1.10687432e-01 9.36439409e-01
+  1.82212861e-01 9.15905706e-01 4.35826030e-01 3.89219980e-01
+  4.21786054e-01 4.13799037e-02]]
 </pre></div>
 </div>
 </div>
@@ -924,13 +964,13 @@ covariance matrix through the <strong>np.linalg.eig()</strong> function.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.07218473624441492
-4.346000154268618
-0.09048717285916912
-[[ 1.0974119   3.2131067   3.36880327]
- [ 3.2131067  10.51564682  9.75138064]
- [ 3.36880327  9.75138064 17.26527089]]
-[25.09487358  0.09070064  3.6927554 ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.11406297261341168
+4.669908227073521
+0.2806901924685401
+[[ 0.98292239  2.97664837  2.73565966]
+ [ 2.97664837 10.21905519  8.21690241]
+ [ 2.73565966  8.21690241 13.03354844]]
+[20.77597019  0.09165112  3.36790471]
 </pre></div>
 </div>
 </div>

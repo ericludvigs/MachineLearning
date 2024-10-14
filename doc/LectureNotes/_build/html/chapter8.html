@@ -308,6 +308,31 @@ const thebe_selector_output = ".output, .cell_output"
    Week 39: Optimization and  Gradient Methods
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week40.html">
+   Week 40: Gradient descent methods (continued) and start Neural networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek41.html">
+   Exercises week 41
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week41.html">
+   Week 41 Neural networks and constructing a neural network code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek42.html">
+   Exercises week 42
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week42.html">
+   Week 42 Constructing a Neural Network code with examples
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -318,6 +343,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="project1.html">
    Project 1 on Machine Learning, deadline October 7 (midnight), 2024
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project2.html">
+   Project 2 on Machine Learning, deadline November 4 (Midnight)
   </a>
  </li>
 </ul>
@@ -721,10 +751,10 @@ covariance matrix through the <strong>np.linalg.eig()</strong> function.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.13035147135400782
-4.25879315330607
-[[0.86867512 2.59009792]
- [2.59009792 8.82533209]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1001408041761458
+4.2807716628772665
+[[ 1.15654145  3.54867722]
+ [ 3.54867722 11.70485195]]
 </pre></div>
 </div>
 </div>
@@ -764,10 +794,10 @@ a more brute force way. Here we scale the mean values for each column of the des
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.08690184845323
-1.521422502348998
-[[1.         0.69768266]
- [0.69768266 1.        ]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.09543871010617433
+1.6888043337746685
+[[1.        0.7167077]
+ [0.7167077 1.       ]]
 </pre></div>
 </div>
 </div>
@@ -796,30 +826,30 @@ this matrix we easily see that it is a positive definite matrix.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.14550854  1.96870431]
- [ 0.79787194  3.11438414]
- [-0.18497496 -1.31315504]
- [-1.52706754 -4.97482498]
- [-1.30190897 -3.11113486]
- [-0.08421808 -1.70928399]
- [ 0.11992194 -0.07776381]
- [-0.90717653 -2.20404927]
- [ 1.05201041  5.38762019]
- [ 0.89003324  2.9195033 ]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[-0.20575734  0.01384583]
+ [-0.89876098 -3.04065686]
+ [-0.76289128 -3.17080691]
+ [-0.0334136   0.16124569]
+ [ 2.73970542  9.28885103]
+ [ 0.75413023  2.98474769]
+ [-1.87894459 -5.48121459]
+ [-1.26814205 -2.4848097 ]
+ [ 0.18114057 -0.9889962 ]
+ [ 1.37293361  2.71779401]]
           0         1
-0  1.145509  1.968704
-1  0.797872  3.114384
-2 -0.184975 -1.313155
-3 -1.527068 -4.974825
-4 -1.301909 -3.111135
-5 -0.084218 -1.709284
-6  0.119922 -0.077764
-7 -0.907177 -2.204049
-8  1.052010  5.387620
-9  0.890033  2.919503
+0 -0.205757  0.013846
+1 -0.898761 -3.040657
+2 -0.762891 -3.170807
+3 -0.033414  0.161246
+4  2.739705  9.288851
+5  0.754130  2.984748
+6 -1.878945 -5.481215
+7 -1.268142 -2.484810
+8  0.181141 -0.988996
+9  1.372934  2.717794
           0         1
-0  1.000000  0.937057
-1  0.937057  1.000000
+0  1.000000  0.970965
+1  0.970965  1.000000
 </pre></div>
 </div>
 </div>
@@ -876,37 +906,37 @@ this matrix we easily see that it is a positive definite matrix.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     0         1         2         3         4         5         6         7   \
 0   0.0  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000   
-1   0.0  0.080345  0.078573  0.079174  0.077839  0.076679  0.070275  0.069320   
-2   0.0  0.078573  0.078146  0.079202  0.078688  0.078268  0.071580  0.071186   
-3   0.0  0.079174  0.079202  0.083342  0.083016  0.082784  0.076947  0.076648   
-4   0.0  0.077839  0.078688  0.083016  0.083260  0.083547  0.077485  0.077601   
-5   0.0  0.076679  0.078268  0.082784  0.083547  0.084312  0.078044  0.078541   
-6   0.0  0.070275  0.071580  0.076947  0.077485  0.078044  0.072947  0.073258   
-7   0.0  0.069320  0.071186  0.076648  0.077601  0.078541  0.073258  0.073882   
-8   0.0  0.068539  0.070918  0.076479  0.077813  0.079107  0.073647  0.074561   
-9   0.0  0.067922  0.070772  0.076434  0.078123  0.079747  0.074115  0.075302   
-10  0.0  0.061319  0.063395  0.068977  0.070098  0.071191  0.066686  0.067431   
-11  0.0  0.060726  0.063206  0.068843  0.070274  0.071656  0.066988  0.067974   
-12  0.0  0.060275  0.063130  0.068827  0.070547  0.072200  0.067374  0.068587   
-13  0.0  0.059956  0.063161  0.068924  0.070916  0.072824  0.067843  0.069270   
-14  0.0  0.059761  0.063294  0.069129  0.071379  0.073528  0.068394  0.070024   
+1   0.0  0.090565  0.089065  0.093226  0.091674  0.090154  0.086287  0.084847   
+2   0.0  0.089065  0.087946  0.092421  0.091068  0.089735  0.085988  0.084674   
+3   0.0  0.093226  0.092421  0.102147  0.100816  0.099494  0.098144  0.096731   
+4   0.0  0.091674  0.091068  0.100816  0.099622  0.098431  0.097115  0.095803   
+5   0.0  0.090154  0.089735  0.099494  0.098431  0.097365  0.096077  0.094862   
+6   0.0  0.086287  0.085988  0.098144  0.097115  0.096077  0.096630  0.095395   
+7   0.0  0.084847  0.084674  0.096731  0.095803  0.094862  0.095395  0.094243   
+8   0.0  0.083459  0.083405  0.095358  0.094527  0.093680  0.094189  0.093115   
+9   0.0  0.082121  0.082180  0.094027  0.093288  0.092530  0.093011  0.092013   
+10  0.0  0.078708  0.078711  0.091732  0.090935  0.090118  0.091871  0.090804   
+11  0.0  0.077431  0.077523  0.090387  0.089668  0.088926  0.090626  0.089626   
+12  0.0  0.076203  0.076378  0.089086  0.088441  0.087772  0.089417  0.088481   
+13  0.0  0.075021  0.075274  0.087828  0.087255  0.086655  0.088242  0.087369   
+14  0.0  0.073883  0.074212  0.086611  0.086107  0.085573  0.087102  0.086289   
 
           8         9         10        11        12        13        14  
 0   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  
-1   0.068539  0.067922  0.061319  0.060726  0.060275  0.059956  0.059761  
-2   0.070918  0.070772  0.063395  0.063206  0.063130  0.063161  0.063294  
-3   0.076479  0.076434  0.068977  0.068843  0.068827  0.068924  0.069129  
-4   0.077813  0.078123  0.070098  0.070274  0.070547  0.070916  0.071379  
-5   0.079107  0.079747  0.071191  0.071656  0.072200  0.072824  0.073528  
-6   0.073647  0.074115  0.066686  0.066988  0.067374  0.067843  0.068394  
-7   0.074561  0.075302  0.067431  0.067974  0.068587  0.069270  0.070024  
-8   0.075513  0.076508  0.068215  0.068985  0.069811  0.070696  0.071643  
-9   0.076508  0.077745  0.069045  0.070027  0.071055  0.072132  0.073262  
-10  0.068215  0.069045  0.061898  0.062520  0.063197  0.063933  0.064728  
-11  0.068985  0.070027  0.062520  0.063332  0.064189  0.065096  0.066054  
-12  0.069811  0.071055  0.063197  0.064189  0.065217  0.066286  0.067400  
-13  0.070696  0.072132  0.063933  0.065096  0.066286  0.067511  0.068775  
-14  0.071643  0.073262  0.064728  0.066054  0.067400  0.068775  0.070183  
+1   0.083459  0.082121  0.078708  0.077431  0.076203  0.075021  0.073883  
+2   0.083405  0.082180  0.078711  0.077523  0.076378  0.075274  0.074212  
+3   0.095358  0.094027  0.091732  0.090387  0.089086  0.087828  0.086611  
+4   0.094527  0.093288  0.090935  0.089668  0.088441  0.087255  0.086107  
+5   0.093680  0.092530  0.090118  0.088926  0.087772  0.086655  0.085573  
+6   0.094189  0.093011  0.091871  0.090626  0.089417  0.088242  0.087102  
+7   0.093115  0.092013  0.090804  0.089626  0.088481  0.087369  0.086289  
+8   0.092064  0.091034  0.089755  0.088642  0.087560  0.086508  0.085486  
+9   0.091034  0.090075  0.088726  0.087675  0.086653  0.085659  0.084694  
+10  0.089755  0.088726  0.088455  0.087327  0.086227  0.085155  0.084112  
+11  0.088642  0.087675  0.087327  0.086256  0.085212  0.084195  0.083203  
+12  0.087560  0.086653  0.086227  0.085212  0.084222  0.083257  0.082316  
+13  0.086508  0.085659  0.085155  0.084195  0.083257  0.082342  0.081450  
+14  0.085486  0.084694  0.084112  0.083203  0.082316  0.081450  0.080605  
 </pre></div>
 </div>
 </div>
@@ -1095,10 +1125,12 @@ We can write our own code or simply use either the functionaly of <strong>numpy<
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          0         1
-0  4.032196  2.034476
-1  2.034476  1.997746
-[[4.0321956  2.03447649]
- [2.03447649 1.99774602]]
+0  4.114499  2.071143
+1  2.071143  2.061388
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[4.11449851 2.07114326]
+ [2.07114326 2.0613875 ]]
 </pre></div>
 </div>
 </div>
@@ -1125,8 +1157,8 @@ Our own code here is not very elegant and asks for obvious improvements. It is t
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Centered covariance using own code
-[[4.0321956  2.03447649]
- [2.03447649 1.99774602]]
+[[4.11449851 2.07114326]
+ [2.07114326 2.0613875 ]]
 </pre></div>
 </div>
 <img alt="_images/chapter8_65_1.png" src="_images/chapter8_65_1.png" />
@@ -1186,16 +1218,16 @@ questions.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues of Covariance matrix
-5.2895786617507
-0.7403629637766833
+5.399533503407795
+0.776352510835556
 First eigenvector
-[0.85064942 0.52573336]
+[0.84973247 0.52721412]
 Second eigenvector
-[-0.52573336  0.85064942]
+[-0.52721412  0.84973247]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvector of largest eigenvalue
-[-0.85064942 -0.52573336]
+[-0.84973247 -0.52721412]
 </pre></div>
 </div>
 </div>

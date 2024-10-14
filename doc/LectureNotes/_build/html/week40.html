@@ -55,6 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exercises week 41" href="exercisesweek41.html" />
     <link rel="prev" title="Week 39: Optimization and Gradient Methods" href="week39.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -310,6 +311,43 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Week 40: Gradient descent methods (continued) and start Neural networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek41.html">
+   Exercises week 41
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week41.html">
+   Week 41 Neural networks and constructing a neural network code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek42.html">
+   Exercises week 42
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week42.html">
+   Week 42 Constructing a Neural Network code with examples
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="project1.html">
+   Project 1 on Machine Learning, deadline October 7 (midnight), 2024
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project2.html">
+   Project 2 on Machine Learning, deadline November 4 (Midnight)
   </a>
  </li>
 </ul>
@@ -1276,17 +1314,17 @@ We summarize some of these here for the methods we hvae studied in project one, 
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Parameters for OLS using gradient descent
-[[4.14721582]
- [2.54760497]
- [5.2212296 ]]
+[[3.8184887 ]
+ [3.47851966]
+ [4.77551387]]
 Parameters for Ridge using gradient descent
-[[3.75424998]
- [3.49608088]
- [4.78010668]]
+[[3.92021197]
+ [3.11388017]
+ [4.9458396 ]]
 Parameters for Lasso using gradient descent
-[[3.62716271]
- [3.82146046]
- [4.64516328]]
+[[3.87323528]
+ [3.3008836 ]
+ [4.86284277]]
 </pre></div>
 </div>
 </div>
@@ -1338,11 +1376,11 @@ Parameters for Lasso using gradient descent
 [[4.]
  [3.]
  [5.]]
-0 [-25.77106886] [-35.02189606]
-1 [3.49285045e-13] [4.71505132e-13]
-2 [1.24344979e-16] [3.86639832e-16]
-3 [9.05941988e-16] [1.48786826e-15]
-4 [-7.99360578e-16] [-1.35823372e-15]
+0 [-31.91417133] [-44.48017159]
+1 [3.48805429e-13] [4.67477123e-13]
+2 [6.75015599e-16] [1.30675215e-15]
+3 [-1.17239551e-15] [-1.78477759e-15]
+4 [6.75015599e-16] [1.30675215e-15]
 beta from own Newton code
 [[4.]
  [3.]
@@ -1603,9 +1641,6 @@ function.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gamma_j after 500 epochs: 9.97108e-05
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -1687,15 +1722,15 @@ function.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.16180248]
- [2.8250103 ]]
-Eigenvalues of Hessian Matrix:[0.26646852 4.68110474]
+[[3.90300704]
+ [3.16913489]]
+Eigenvalues of Hessian Matrix:[0.2964378  4.12443871]
 theta from own gd
-[[4.16180248]
- [2.8250103 ]]
+[[3.90300704]
+ [3.16913489]]
 theta from own sdg
-[[4.16257872]
- [2.80576215]]
+[[3.93272428]
+ [3.16328315]]
 </pre></div>
 </div>
 <img alt="_images/week40_34_1.png" src="_images/week40_34_1.png" />
@@ -2409,12 +2444,12 @@ first example shows results with ordinary leats squares.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[3.98246764]
- [3.04018043]]
-Eigenvalues of Hessian Matrix:[0.31541884 4.4735968 ]
+[[4.13791264]
+ [2.92552059]]
+Eigenvalues of Hessian Matrix:[0.27874136 4.16226023]
 theta from own gd
-[[3.98246764]
- [3.04018043]]
+[[4.13791264]
+ [2.92552059]]
 </pre></div>
 </div>
 <img alt="_images/week40_100_1.png" src="_images/week40_100_1.png" />
@@ -2485,73 +2520,73 @@ theta from own gd
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
 [[4.]
  [3.]]
-Eigenvalues of Hessian Matrix:[0.32799141 4.41229845]
-0 [-16.27698328] [-18.5653087]
-1 [-0.44867801] [0.37354121]
-2 [-0.41532521] [0.34577375]
-3 [-0.38445171] [0.32007041]
-4 [-0.35587321] [0.29627774]
-5 [-0.32941912] [0.27425372]
-6 [-0.30493151] [0.25386687]
-7 [-0.2822642] [0.23499549]
-8 [-0.26128189] [0.21752693]
-9 [-0.24185931] [0.20135691]
-10 [-0.22388052] [0.1863889]
-11 [-0.2072382] [0.17253354]
-12 [-0.191833] [0.15970814]
-13 [-0.17757295] [0.14783612]
-14 [-0.16437294] [0.13684661]
-15 [-0.15215415] [0.12667402]
-16 [-0.14084366] [0.11725761]
-17 [-0.13037395] [0.10854118]
-18 [-0.12068251] [0.1004727]
-19 [-0.11171148] [0.09300398]
-20 [-0.10340733] [0.08609047]
-21 [-0.09572047] [0.07969087]
-22 [-0.08860502] [0.07376699]
-23 [-0.0820185] [0.06828347]
-24 [-0.0759216] [0.06320757]
-25 [-0.07027791] [0.05850899]
-26 [-0.06505375] [0.05415968]
-27 [-0.06021793] [0.05013368]
-28 [-0.05574159] [0.04640695]
-29 [-0.051598] [0.04295726]
+Eigenvalues of Hessian Matrix:[0.32606365 3.80499859]
+0 [-10.98955596] [-10.8332972]
+1 [-0.26421616] [0.25444295]
+2 [-0.24157456] [0.23263884]
+3 [-0.22087319] [0.2127032]
+4 [-0.20194579] [0.19447592]
+5 [-0.18464035] [0.1778106]
+6 [-0.16881787] [0.16257339]
+7 [-0.15435127] [0.1486419]
+8 [-0.14112437] [0.13590426]
+9 [-0.12903093] [0.12425815]
+10 [-0.11797382] [0.11361003]
+11 [-0.10786423] [0.10387439]
+12 [-0.09862097] [0.09497303]
+13 [-0.09016979] [0.08683446]
+14 [-0.08244283] [0.07939331]
+15 [-0.07537801] [0.07258982]
+16 [-0.06891861] [0.06636934]
+17 [-0.06301273] [0.06068192]
+18 [-0.05761295] [0.05548187]
+19 [-0.05267589] [0.05072744]
+20 [-0.04816191] [0.04638043]
+21 [-0.04403475] [0.04240593]
+22 [-0.04026126] [0.03877201]
+23 [-0.03681113] [0.0354495]
+24 [-0.03365665] [0.03241171]
+25 [-0.0307725] [0.02963424]
+26 [-0.02813549] [0.02709478]
+27 [-0.02572446] [0.02477293]
+28 [-0.02352005] [0.02265005]
+29 [-0.02150453] [0.02070909]
 theta from own gd
-[[3.85437905]
- [3.12123488]]
-0 [-0.04776242] [0.039764]
-1 [-0.04421197] [0.03680811]
-2 [-0.0398603] [0.03318519]
-3 [-0.03559176] [0.02963147]
-4 [-0.03166546] [0.02636268]
-5 [-0.02813369] [0.02342235]
-6 [-0.02498282] [0.02079913]
-7 [-0.02218045] [0.01846605]
-8 [-0.01969093] [0.01639344]
-9 [-0.01748034] [0.01455304]
-10 [-0.01551775] [0.0129191]
-11 [-0.01377545] [0.01146857]
-12 [-0.01222875] [0.01018089]
-13 [-0.01085571] [0.00903778]
-14 [-0.00963683] [0.00802302]
-15 [-0.0085548] [0.00712219]
-16 [-0.00759427] [0.00632251]
-17 [-0.00674158] [0.00561262]
-18 [-0.00598464] [0.00498243]
-19 [-0.00531268] [0.004423]
-20 [-0.00471617] [0.00392639]
-21 [-0.00418664] [0.00348553]
-22 [-0.00371656] [0.00309418]
-23 [-0.00329927] [0.00274676]
-24 [-0.00292882] [0.00243835]
-25 [-0.00259997] [0.00216458]
-26 [-0.00230805] [0.00192154]
-27 [-0.0020489] [0.00170579]
-28 [-0.00181885] [0.00151426]
-29 [-0.00161463] [0.00134424]
+[[3.93969971]
+ [3.05806981]]
+0 [-0.01966173] [0.01893445]
+1 [-0.01797685] [0.0173119]
+2 [-0.01593089] [0.01534161]
+3 [-0.01395192] [0.01343585]
+4 [-0.01216264] [0.01171276]
+5 [-0.0105836] [0.01019212]
+6 [-0.00920294] [0.00886253]
+7 [-0.00800011] [0.00770419]
+8 [-0.00695371] [0.00669649]
+9 [-0.0060439] [0.00582034]
+10 [-0.00525303] [0.00505872]
+11 [-0.00456562] [0.00439674]
+12 [-0.00396815] [0.00382137]
+13 [-0.00344887] [0.0033213]
+14 [-0.00299754] [0.00288666]
+15 [-0.00260527] [0.0025089]
+16 [-0.00226433] [0.00218058]
+17 [-0.00196801] [0.00189522]
+18 [-0.00171047] [0.0016472]
+19 [-0.00148663] [0.00143164]
+20 [-0.00129209] [0.00124429]
+21 [-0.001123] [0.00108146]
+22 [-0.00097604] [0.00093994]
+23 [-0.00084831] [0.00081693]
+24 [-0.0007373] [0.00071003]
+25 [-0.00064081] [0.00061711]
+26 [-0.00055695] [0.00053635]
+27 [-0.00048407] [0.00046616]
+28 [-0.00042072] [0.00040516]
+29 [-0.00036566] [0.00035214]
 theta from own gd wth momentum
-[[3.99562995]
- [3.00363823]]
+[[3.99902531]
+ [3.00093864]]
 </pre></div>
 </div>
 </div>
@@ -2640,18 +2675,18 @@ theta from own gd wth momentum
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.10426556]
- [2.93942872]]
-Eigenvalues of Hessian Matrix:[0.31367041 4.07517385]
+[[4.11762444]
+ [3.04098313]]
+Eigenvalues of Hessian Matrix:[0.29738252 4.51279273]
 theta from own gd
-[[4.10426556]
- [2.93942872]]
+[[4.11762444]
+ [3.04098313]]
 </pre></div>
 </div>
 <img alt="_images/week40_104_1.png" src="_images/week40_104_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own sdg
-[[4.08587209]
- [2.96301764]]
+[[4.07058967]
+ [3.024004  ]]
 </pre></div>
 </div>
 </div>
@@ -2733,17 +2768,17 @@ theta from own gd
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.33528448]
- [2.81889188]]
-Eigenvalues of Hessian Matrix:[0.30916402 4.51611732]
+[[4.4252885 ]
+ [2.70944365]]
+Eigenvalues of Hessian Matrix:[0.28973035 4.32089655]
 theta from own gd
-[[4.33477019]
- [2.81931348]]
+[[4.42394588]
+ [2.71059619]]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own sdg with momentum
-[[4.40800396]
- [2.78459458]]
+[[4.44845593]
+ [2.72577807]]
 </pre></div>
 </div>
 </div>
@@ -2812,9 +2847,9 @@ theta from own gd
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own AdaGrad
-[[2.00003828]
- [2.99979896]
- [4.00019258]]
+[[2.00036797]
+ [2.99817613]
+ [4.00177485]]
 </pre></div>
 </div>
 </div>
@@ -2890,9 +2925,9 @@ theta from own gd
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own RMSprop
-[[2.01129731]
- [3.01249445]
- [4.00885858]]
+[[2.00119865]
+ [3.01346635]
+ [3.99284588]]
 </pre></div>
 </div>
 </div>
@@ -2972,9 +3007,9 @@ theta from own gd
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own ADAM
-[[2.00001716]
- [2.99992107]
- [4.00007706]]
+[[1.99997244]
+ [3.00018876]
+ [3.99983332]]
 </pre></div>
 </div>
 </div>
@@ -3095,7 +3130,7 @@ It provides composable transformations of Python+NumPy programs: differentiate, 
   return asarray(x, dtype=self.dtype)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11753f700&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x10cc52cd0&gt;]
 </pre></div>
 </div>
 <img alt="_images/week40_120_2.png" src="_images/week40_120_2.png" />
@@ -3130,7 +3165,7 @@ It provides composable transformations of Python+NumPy programs: differentiate, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x11bc3a1f0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x10fcfaeb0&gt;
 </pre></div>
 </div>
 <img alt="_images/week40_122_1.png" src="_images/week40_122_1.png" />
@@ -3809,6 +3844,13 @@ become the most popular for <em>deep neural networks</em></p>
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Week 39: Optimization and  Gradient Methods</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="exercisesweek41.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercises week 41</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

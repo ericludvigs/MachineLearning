@@ -308,6 +308,31 @@ const thebe_selector_output = ".output, .cell_output"
    Week 39: Optimization and  Gradient Methods
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week40.html">
+   Week 40: Gradient descent methods (continued) and start Neural networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek41.html">
+   Exercises week 41
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week41.html">
+   Week 41 Neural networks and constructing a neural network code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek42.html">
+   Exercises week 42
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week42.html">
+   Week 42 Constructing a Neural Network code with examples
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -318,6 +343,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="project1.html">
    Project 1 on Machine Learning, deadline October 7 (midnight), 2024
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="project2.html">
+   Project 2 on Machine Learning, deadline November 4 (Midnight)
   </a>
  </li>
 </ul>
@@ -1651,7 +1681,7 @@ Since we are not using <strong>Scikit-Learn</strong> here we can define our own 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9952505213910134
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9953466931203151
 </pre></div>
 </div>
 </div>
@@ -1668,7 +1698,7 @@ Since we are not using <strong>Scikit-Learn</strong> here we can define our own 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.008753288788081405
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.010175219431920396
 </pre></div>
 </div>
 </div>
@@ -1683,31 +1713,23 @@ Since we are not using <strong>Scikit-Learn</strong> here we can define our own 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[8.90304177e-02 3.21655059e-02 1.15924557e-02 1.83823317e-02
- 8.19559737e-03 1.66018725e-02 1.79135536e-03 1.03313259e-01
- 7.69182892e-04 1.29306584e-02 1.21565007e-02 2.83463634e-03
- 3.03538673e-02 2.37415625e-02 1.56790195e-02 9.03400724e-03
- 1.35613536e-02 5.35506347e-02 1.01123792e-02 4.10604579e-02
- 2.63898112e-02 1.94766419e-02 3.81425129e-02 3.27482829e-02
- 5.12829994e-03 6.02901273e-03 8.26321660e-02 4.04504728e-02
- 2.20601797e-02 4.62113349e-03 9.03476611e-04 4.87494456e-02
- 3.82060913e-03 2.53729411e-02 2.38612299e-02 1.59355752e-02
- 3.60160003e-03 1.65738717e-02 2.98947674e-02 5.18501900e-03
- 9.36303682e-03 4.81218742e-02 1.49392067e-02 4.88551766e-03
- 2.17643975e-02 2.20608548e-04 1.90135464e-02 2.74291603e-02
- 1.23344210e-02 6.03309191e-03 1.57252451e-02 9.02612988e-03
- 3.32084559e-02 3.76692036e-03 2.87169607e-02 4.85551266e-02
- 1.48826894e-02 6.41842093e-04 1.89017198e-02 3.49584063e-02
- 1.77652198e-02 6.38298234e-03 1.05034088e-03 1.99753321e-02
- 5.52031552e-03 8.22217237e-03 6.86192682e-02 8.40354798e-03
- 1.29491144e-02 7.44658658e-03 1.00731392e-02 9.52284329e-02
- 1.51437058e-02 2.00002585e-05 2.37700967e-02 1.95166920e-02
- 4.82376174e-02 3.73986200e-02 4.84707251e-02 8.76887316e-02
- 2.74724414e-02 5.14825560e-03 1.26254957e-02 2.81042619e-02
- 2.11265643e-02 2.52301447e-03 3.13819592e-02 2.93900569e-02
- 3.65720152e-02 1.02850506e-02 4.85945208e-02 2.79870689e-02
- 3.12846660e-02 6.17869861e-02 9.09590269e-03 1.11715109e-02
- 3.62863106e-02 1.21277816e-02 9.05665429e-03 4.85293303e-02]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.03699304 0.0218856  0.02021288 0.0334505  0.02960445 0.01369614
+ 0.00606112 0.01429853 0.01174937 0.02585059 0.02044223 0.00174884
+ 0.06133572 0.03159246 0.04435458 0.00125802 0.00100423 0.00230308
+ 0.01055384 0.02352843 0.06971862 0.01300036 0.00547332 0.05554795
+ 0.01142354 0.01181458 0.00148216 0.01419341 0.0305221  0.01272102
+ 0.01700746 0.01552039 0.01616657 0.10695771 0.00405576 0.02979087
+ 0.0529838  0.01420773 0.06220192 0.04104182 0.00653725 0.07170448
+ 0.00997215 0.02490769 0.02580654 0.01682317 0.03221473 0.01838531
+ 0.02028936 0.0064349  0.04323964 0.02705202 0.03692828 0.01975755
+ 0.05636265 0.02880987 0.05692207 0.04085864 0.01085261 0.01457889
+ 0.03418643 0.01919791 0.00101555 0.00636951 0.04217103 0.0476266
+ 0.01169528 0.04544327 0.00978267 0.04046984 0.0032882  0.02072876
+ 0.05526935 0.05461692 0.00877816 0.00724303 0.00045923 0.00059105
+ 0.00917881 0.04254787 0.08728977 0.04513394 0.01606644 0.08956994
+ 0.02687671 0.07449122 0.04497158 0.01713187 0.02553907 0.0397137
+ 0.03313193 0.00738299 0.01743124 0.02953975 0.01131825 0.0864086
+ 0.01925934 0.02439287 0.09331672 0.01721277]
 </pre></div>
 </div>
 </div>
@@ -1776,15 +1798,15 @@ but now splitting the data into a training set and a test set.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2.05054319 -0.48521055  6.95338273 -2.63619709  1.0524497 ]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.94735263  0.70175778  2.99348646  1.86611894 -0.45576546]
 Training R2
-0.9959308805732706
+0.9959836634296064
 Training MSE
-0.009211602191395454
+0.0085274606925055
 Test R2
-0.9955318336036834
+0.992232777849821
 Test MSE
-0.011818646101922625
+0.010638334964957053
 </pre></div>
 </div>
 </div>
@@ -2448,9 +2470,7 @@ the aims is to reproduce Figure 2.11 of <a class="reference external" href="http
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE before scaling: 0.00
 R2 score before scaling 1.00
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Feature min values before scaling:
+Feature min values before scaling:
  [1.00000000e+00 6.97906022e-03 2.43639284e-03 4.87072815e-05
  1.70037324e-05 5.93601008e-06 3.39931051e-07 1.18670072e-07
  4.14277718e-08 1.44624525e-08 2.37239927e-09 8.28205578e-10
