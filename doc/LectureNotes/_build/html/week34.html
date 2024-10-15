@@ -333,6 +333,11 @@ const thebe_selector_output = ".output, .cell_output"
    Week 42 Constructing a Neural Network code with examples
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="additionweek42.html">
+   Exercises Week 42: Logistic Regression and Optimization, reminders from week 38 and week 40
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -1713,8 +1718,8 @@ developed in the 1970s, namely EISPACK and LINPACK.  We describe them shortly he
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.81737781  0.45847011  0.53332849  1.04937026  0.53235952  2.24033384
- -0.05605892 -0.02193078 -0.37343957  0.17849836]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-0.02037155  0.34249217 -0.02265998 -0.82004436 -0.98481245 -0.43754843
+  2.55565884 -1.87349626  0.07153889  1.39401392]
 </pre></div>
 </div>
 </div>
@@ -1939,26 +1944,26 @@ lowercase letters for vectors and uppercase letters for matrices)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.15586219 0.68891428 0.38675231 0.63546905 0.97286326 0.423102
-  0.42841423 0.3478095  0.66130478 0.63443371]
- [0.88685415 0.82561703 0.56766321 0.43258818 0.99057275 0.40058341
-  0.84581375 0.64630711 0.03266152 0.57599494]
- [0.10145028 0.9074157  0.39386718 0.12831838 0.46242424 0.09280524
-  0.88415819 0.26443391 0.55095316 0.85897711]
- [0.69243548 0.33745439 0.14452065 0.29030256 0.8063779  0.60720029
-  0.42914251 0.44895662 0.09310479 0.48442601]
- [0.95152814 0.83294718 0.11005335 0.8758851  0.19375828 0.73888203
-  0.83203197 0.69203997 0.65147818 0.35195241]
- [0.21506004 0.24874378 0.31370028 0.9525328  0.71672791 0.05879106
-  0.45007578 0.36388542 0.50937003 0.57854115]
- [0.80033616 0.45273617 0.18038547 0.49557088 0.36209091 0.44512218
-  0.84078641 0.28924386 0.99166852 0.22896144]
- [0.77579275 0.83519517 0.40640797 0.66272614 0.18234499 0.97628064
-  0.19808709 0.1280526  0.33700495 0.32114535]
- [0.95462534 0.72047148 0.24512233 0.18474924 0.69169665 0.68763036
-  0.8861811  0.54193001 0.87830277 0.79251831]
- [0.13092444 0.41452482 0.40447213 0.89714357 0.25360039 0.80373997
-  0.51279028 0.58161787 0.08742496 0.45104086]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.30887484 0.88691234 0.59898921 0.69030225 0.68749642 0.7461895
+  0.7981908  0.11526665 0.0580672  0.82864173]
+ [0.5620646  0.2133127  0.63928106 0.60001225 0.69306119 0.31562008
+  0.36658646 0.52488688 0.38571859 0.42772604]
+ [0.09211239 0.44108308 0.40431935 0.15367403 0.09666342 0.92910808
+  0.28833782 0.73299464 0.02330901 0.35785072]
+ [0.11214365 0.29091211 0.89989636 0.84908687 0.33027933 0.3284789
+  0.38687011 0.41866748 0.2401586  0.39590571]
+ [0.26675647 0.89054207 0.22783539 0.92719687 0.86506494 0.62863887
+  0.85050649 0.7963438  0.41705228 0.08833634]
+ [0.21784616 0.37008469 0.39529587 0.8932188  0.48411213 0.94802663
+  0.95001004 0.30633304 0.02856881 0.18415031]
+ [0.91527102 0.60534421 0.00392402 0.68043896 0.88726714 0.8908983
+  0.10987614 0.6243301  0.2004542  0.93460701]
+ [0.59908591 0.56291214 0.45572817 0.80633871 0.40615633 0.76065256
+  0.86660944 0.17569961 0.29236762 0.25934872]
+ [0.29147052 0.26090013 0.5676397  0.51553626 0.6901769  0.86668761
+  0.17069366 0.95712462 0.70885855 0.28963909]
+ [0.94805555 0.0086714  0.17568084 0.34951108 0.32567311 0.83234002
+  0.7049679  0.38309751 0.171611   0.47767335]]
 </pre></div>
 </div>
 </div>
@@ -2013,13 +2018,13 @@ covariance matrix through the <strong>np.linalg.eig()</strong> function.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.0458524213754298
-3.614161296466206
--0.22985907723809532
-[[0.72589774 2.09219464 1.64672839]
- [2.09219464 6.9187554  4.62198131]
- [1.64672839 4.62198131 6.70530438]]
-[12.05431945  0.07101262  2.22462544]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.0217610577940561
+4.167116584998668
+-0.3619775819765686
+[[ 1.36623476  4.06335853  5.72315862]
+ [ 4.06335853 13.04198387 17.04545125]
+ [ 5.72315862 17.04545125 36.75669703]]
+[46.72993254  0.08216308  4.35282003]
 </pre></div>
 </div>
 </div>
@@ -2244,7 +2249,7 @@ Name: Aragorn, dtype: object
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="nn">/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_57294/1326197715.py</span> in <span class="ni">?</span><span class="nt">()</span>
+<span class="nn">/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64318/1326197715.py</span> in <span class="ni">?</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">new_hobbit</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;First Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Peregrin&quot;</span><span class="p">],</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>               <span class="s1">&#39;Last Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Took&quot;</span><span class="p">],</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>               <span class="s1">&#39;Place of birth&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Shire&quot;</span><span class="p">],</span>

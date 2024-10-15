@@ -333,6 +333,11 @@ const thebe_selector_output = ".output, .cell_output"
    Week 42 Constructing a Neural Network code with examples
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="additionweek42.html">
+   Exercises Week 42: Logistic Regression and Optimization, reminders from week 38 and week 40
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -804,15 +809,15 @@ regression.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.1729993]
- [3.0170097]]
-Eigenvalues of Hessian Matrix:[0.28192769 4.68753434]
+[[4.08418548]
+ [3.02976686]]
+Eigenvalues of Hessian Matrix:[0.35806319 4.4353359 ]
 theta from own gd
-[[4.1729993]
- [3.0170097]]
+[[4.08418548]
+ [3.02976686]]
 theta from own sdg
-[[4.14043884]
- [2.99071523]]
+[[4.09299349]
+ [3.02941655]]
 </pre></div>
 </div>
 <img alt="_images/exercisesweek41_5_1.png" src="_images/exercisesweek41_5_1.png" />
@@ -934,14 +939,14 @@ first example shows results with ordinary leats squares.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.03696458]
- [3.0324793 ]]
-Eigenvalues of Hessian Matrix:[0.30959659 4.4150026 ]
+[[3.96548194]
+ [2.97190351]]
+Eigenvalues of Hessian Matrix:[0.31903447 3.79401569]
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own gd
-[[4.03696458]
- [3.0324793 ]]
+[[3.96548194]
+ [2.97190351]]
 </pre></div>
 </div>
 <img alt="_images/exercisesweek41_16_2.png" src="_images/exercisesweek41_16_2.png" />
@@ -1012,73 +1017,73 @@ Eigenvalues of Hessian Matrix:[0.30959659 4.4150026 ]
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
 [[4.]
  [3.]]
-Eigenvalues of Hessian Matrix:[0.23469347 4.90407685]
-0 [-18.02987043] [-22.42501752]
-1 [-0.32329897] [0.25206371]
-2 [-0.30782691] [0.24000075]
-3 [-0.2930953] [0.22851508]
-4 [-0.27906869] [0.21757908]
-5 [-0.26571335] [0.20716644]
-6 [-0.25299716] [0.19725211]
-7 [-0.24088952] [0.18781225]
-8 [-0.22936132] [0.17882416]
-9 [-0.21838482] [0.17026621]
-10 [-0.20793362] [0.16211781]
-11 [-0.19798258] [0.15435937]
-12 [-0.18850776] [0.14697222]
-13 [-0.17948638] [0.1399386]
-14 [-0.17089674] [0.13324158]
-15 [-0.16271817] [0.12686507]
-16 [-0.15493099] [0.12079371]
-17 [-0.14751649] [0.11501291]
-18 [-0.14045682] [0.10950876]
-19 [-0.13373501] [0.10426802]
-20 [-0.12733488] [0.09927808]
-21 [-0.12124104] [0.09452695]
-22 [-0.11543883] [0.09000319]
-23 [-0.10991429] [0.08569593]
-24 [-0.10465415] [0.08159479]
-25 [-0.09964573] [0.07768993]
-26 [-0.094877] [0.07397193]
-27 [-0.09033649] [0.07043187]
-28 [-0.08601328] [0.06706123]
-29 [-0.08189696] [0.06385189]
+Eigenvalues of Hessian Matrix:[0.2652667  4.71409384]
+0 [-10.46166231] [-12.49018385]
+1 [-0.27410687] [0.21914111]
+2 [-0.25868261] [0.20680982]
+3 [-0.24412628] [0.19517243]
+4 [-0.23038906] [0.18418988]
+5 [-0.21742484] [0.17382534]
+6 [-0.20519013] [0.16404402]
+7 [-0.19364388] [0.1548131]
+8 [-0.18274735] [0.14610161]
+9 [-0.17246397] [0.13788033]
+10 [-0.16275926] [0.13012167]
+11 [-0.15360063] [0.12279959]
+12 [-0.14495737] [0.11588954]
+13 [-0.13680048] [0.10936832]
+14 [-0.12910258] [0.10321406]
+15 [-0.12183785] [0.0974061]
+16 [-0.11498192] [0.09192497]
+17 [-0.10851177] [0.08675226]
+18 [-0.10240571] [0.08187062]
+19 [-0.09664324] [0.07726368]
+20 [-0.09120503] [0.07291598]
+21 [-0.08607283] [0.06881293]
+22 [-0.08122943] [0.06494075]
+23 [-0.07665857] [0.06128647]
+24 [-0.07234492] [0.05783782]
+25 [-0.068274] [0.05458323]
+26 [-0.06443215] [0.05151178]
+27 [-0.06080649] [0.04861316]
+28 [-0.05738485] [0.04587765]
+29 [-0.05415575] [0.04329607]
 theta from own gd
-[[3.66774691]
- [3.25904489]]
-0 [-0.07797763] [0.06079614]
-1 [-0.07424587] [0.05788664]
-2 [-0.06957317] [0.05424351]
-3 [-0.06484181] [0.05055465]
-4 [-0.06031928] [0.04702861]
-5 [-0.05607583] [0.04372016]
-6 [-0.05211919] [0.04063532]
-7 [-0.04843794] [0.03776519]
-8 [-0.04501548] [0.03509683]
-9 [-0.04183444] [0.0326167]
-10 [-0.03887807] [0.03031173]
-11 [-0.03613058] [0.02816961]
-12 [-0.03357723] [0.02617887]
-13 [-0.03120433] [0.02432881]
-14 [-0.02899912] [0.02260949]
-15 [-0.02694975] [0.02101168]
-16 [-0.02504521] [0.01952679]
-17 [-0.02327527] [0.01814683]
-18 [-0.0216304] [0.01686439]
-19 [-0.02010178] [0.01567258]
-20 [-0.01868119] [0.014565]
-21 [-0.01736099] [0.01353569]
-22 [-0.01613409] [0.01257912]
-23 [-0.01499389] [0.01169016]
-24 [-0.01393427] [0.01086401]
-25 [-0.01294954] [0.01009625]
-26 [-0.01203439] [0.00938275]
-27 [-0.01118392] [0.00871967]
-28 [-0.01039355] [0.00810345]
-29 [-0.00965904] [0.00753078]
+[[3.8073322 ]
+ [3.15403275]]
+0 [-0.05110835] [0.04085976]
+1 [-0.04823243] [0.03856054]
+2 [-0.04465557] [0.03570093]
+3 [-0.0410697] [0.03283413]
+4 [-0.03768291] [0.03012648]
+5 [-0.03454641] [0.02761893]
+6 [-0.03166151] [0.02531253]
+7 [-0.02901441] [0.02319624]
+8 [-0.02658761] [0.02125608]
+9 [-0.02436346] [0.01947793]
+10 [-0.02232526] [0.01784845]
+11 [-0.02045753] [0.01635525]
+12 [-0.01874605] [0.01498697]
+13 [-0.01717775] [0.01373315]
+14 [-0.01574065] [0.01258423]
+15 [-0.01442378] [0.01153142]
+16 [-0.01321707] [0.0105667]
+17 [-0.01211133] [0.00968268]
+18 [-0.01109809] [0.00887262]
+19 [-0.01016961] [0.00813033]
+20 [-0.00931882] [0.00745015]
+21 [-0.0085392] [0.00682686]
+22 [-0.00782481] [0.00625572]
+23 [-0.00717018] [0.00573236]
+24 [-0.00657032] [0.00525279]
+25 [-0.00602064] [0.00481334]
+26 [-0.00551695] [0.00441065]
+27 [-0.0050554] [0.00404166]
+28 [-0.00463246] [0.00370353]
+29 [-0.00424491] [0.00339369]
 theta from own gd wth momentum
-[[3.96175251]
- [3.02982009]]
+[[3.98533636]
+ [3.01172319]]
 </pre></div>
 </div>
 </div>
@@ -1131,17 +1136,17 @@ theta from own gd wth momentum
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.15451852]
- [2.83230774]]
-Eigenvalues of Hessian Matrix:[0.30616802 4.24299211]
-0 [-10.57502449] [-11.57610367]
-1 [-4.47905601e-15] [-4.07372439e-16]
-2 [-6.9388939e-16] [-7.21432413e-16]
-3 [-6.9388939e-16] [-7.21432413e-16]
-4 [-6.9388939e-16] [-7.21432413e-16]
+[[3.93148781]
+ [3.11694197]]
+Eigenvalues of Hessian Matrix:[0.29107892 4.58933143]
+0 [-14.1974189] [-16.80311453]
+1 [-8.62149436e-15] [5.26897875e-15]
+2 [9.18725816e-16] [1.08546261e-15]
+3 [-8.74138002e-17] [3.84634327e-16]
+4 [-6.65971184e-17] [-5.31299668e-16]
 beta from own Newton code
-[[4.15451852]
- [2.83230774]]
+[[3.93148781]
+ [3.11694197]]
 </pre></div>
 </div>
 </div>
@@ -1230,20 +1235,18 @@ beta from own Newton code
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[4.04601419]
- [3.12204312]]
-Eigenvalues of Hessian Matrix:[0.33604208 4.45709724]
+[[4.13858163]
+ [2.91322403]]
+Eigenvalues of Hessian Matrix:[0.32670322 4.31925135]
+theta from own gd
+[[4.13858163]
+ [2.91322403]]
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own gd
-[[4.04601419]
- [3.12204312]]
-</pre></div>
-</div>
-<img alt="_images/exercisesweek41_22_2.png" src="_images/exercisesweek41_22_2.png" />
+<img alt="_images/exercisesweek41_22_1.png" src="_images/exercisesweek41_22_1.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own sdg
-[[4.02781444]
- [3.13976073]]
+[[4.18106943]
+ [2.88208835]]
 </pre></div>
 </div>
 </div>
@@ -1325,15 +1328,17 @@ Eigenvalues of Hessian Matrix:[0.33604208 4.45709724]
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Own inversion
-[[3.96417888]
- [3.06634473]]
-Eigenvalues of Hessian Matrix:[0.32962444 4.18715465]
+[[4.0760318 ]
+ [2.91152267]]
+Eigenvalues of Hessian Matrix:[0.30322722 4.36116396]
 theta from own gd
-[[3.9639885]
- [3.0665111]]
-theta from own sdg with momentum
-[[4.00842216]
- [3.14285244]]
+[[4.07471361]
+ [2.91264011]]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own sdg with momentum
+[[4.06851496]
+ [2.83681263]]
 </pre></div>
 </div>
 </div>
@@ -1408,9 +1413,9 @@ theta from own sdg with momentum
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own AdaGrad
-[[1.99969895]
- [3.00167058]
- [3.99835872]]
+[[2.00096829]
+ [2.99563484]
+ [4.00460917]]
 </pre></div>
 </div>
 </div>
@@ -1492,9 +1497,9 @@ theta from own sdg with momentum
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own RMSprop
-[[1.99852187]
- [3.03868311]
- [3.95744254]]
+[[1.99978784]
+ [3.00066798]
+ [3.9995659 ]]
 </pre></div>
 </div>
 </div>
@@ -1580,9 +1585,9 @@ theta from own sdg with momentum
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>theta from own ADAM
-[[1.99996471]
- [3.00026784]
- [3.99973141]]
+[[2.00005799]
+ [2.9997992 ]
+ [4.00015394]]
 </pre></div>
 </div>
 </div>
@@ -1655,7 +1660,7 @@ It provides composable transformations of Python+NumPy programs: differentiate, 
   return asarray(x, dtype=self.dtype)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11892e7f0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x11fd7c160&gt;]
 </pre></div>
 </div>
 <img alt="_images/exercisesweek41_39_2.png" src="_images/exercisesweek41_39_2.png" />
@@ -1690,7 +1695,7 @@ It provides composable transformations of Python+NumPy programs: differentiate, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x118995f70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x11fc31790&gt;
 </pre></div>
 </div>
 <img alt="_images/exercisesweek41_41_1.png" src="_images/exercisesweek41_41_1.png" />
