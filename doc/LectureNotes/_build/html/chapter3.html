@@ -338,6 +338,16 @@ const thebe_selector_output = ".output, .cell_output"
    Exercises Week 42: Logistic Regression and Optimization, reminders from week 38 and week 40
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week43.html">
+   Week 43: Deep Learning: Constructing a Neural Network code and solving differential equations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercisesweek43.html">
+   Exercises week 43
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -874,10 +884,10 @@ number <span class="math notranslate nohighlight">\(i\)</span> is left out. Usin
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Runtime: 0.15199 sec
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Runtime: 0.147161 sec
 Jackknife Statistics :
 original           bias      std. error
- 100.028        100.018        0.150301
+ 100.113        100.103         0.15078
 </pre></div>
 </div>
 </div>
@@ -1096,7 +1106,7 @@ theorem.</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bootstrap Statistics :
 original           bias      std. error
- 99.9349  14.9929        99.9366        0.148477
+  99.966  14.8724        99.9645        0.146212
 </pre></div>
 </div>
 </div>
@@ -1352,7 +1362,9 @@ Error: 0.021592704588025025
 Bias^2: 0.010516485576645508
 Var: 0.011076219011379514
 0.021592704588025025 &gt;= 0.010516485576645508 + 0.011076219011379514 = 0.021592704588025022
-Polynomial degree: 11
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Polynomial degree: 11
 Error: 0.07160048164233104
 Bias^2: 0.014436800088904942
 Var: 0.05716368155342608
@@ -1362,9 +1374,7 @@ Error: 0.11547777218872497
 Bias^2: 0.01628578269596628
 Var: 0.09919198949275869
 0.11547777218872497 &gt;= 0.01628578269596628 + 0.09919198949275869 = 0.11547777218872497
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Polynomial degree: 13
+Polynomial degree: 13
 Error: 0.22842468702219465
 Bias^2: 0.01975416527185249
 Var: 0.20867052175034223
@@ -1592,12 +1602,12 @@ Mean squared error on test data: 123711.53703498
 Degree of polynomial:   3
 Mean squared error on training data: 9011.85263220
 Mean squared error on test data: 10913.84780262
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:   4
+Degree of polynomial:   4
 Mean squared error on training data: 303.47610036
 Mean squared error on test data: 426.30787294
-Degree of polynomial:   5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:   5
 Mean squared error on training data: 3.80354994
 Mean squared error on test data: 5.98822371
 Degree of polynomial:   6
@@ -1606,12 +1616,12 @@ Mean squared error on test data: 8.14812206
 Degree of polynomial:   7
 Mean squared error on training data: 0.47075725
 Mean squared error on test data: 2.00607783
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:   8
+Degree of polynomial:   8
 Mean squared error on training data: 0.04912436
 Mean squared error on test data: 0.21596432
-Degree of polynomial:   9
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:   9
 Mean squared error on training data: 0.02522069
 Mean squared error on test data: 0.08576932
 Degree of polynomial:  10
@@ -1620,12 +1630,12 @@ Mean squared error on test data: 1.20015436
 Degree of polynomial:  11
 Mean squared error on training data: 0.01640891
 Mean squared error on test data: 1.35533773
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  12
+Degree of polynomial:  12
 Mean squared error on training data: 0.00813803
 Mean squared error on test data: 0.17446471
-Degree of polynomial:  13
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  13
 Mean squared error on training data: 0.00759119
 Mean squared error on test data: 1.08131003
 Degree of polynomial:  14
@@ -1634,12 +1644,12 @@ Mean squared error on test data: 0.81333808
 Degree of polynomial:  15
 Mean squared error on training data: 0.00410478
 Mean squared error on test data: 92.09163947
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  16
+Degree of polynomial:  16
 Mean squared error on training data: 0.00315593
 Mean squared error on test data: 234.38827994
-Degree of polynomial:  17
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  17
 Mean squared error on training data: 0.00242999
 Mean squared error on test data: 1271.34367970
 Degree of polynomial:  18
@@ -1648,12 +1658,12 @@ Mean squared error on test data: 108.21093775
 Degree of polynomial:  19
 Mean squared error on training data: 0.00156374
 Mean squared error on test data: 1385.79778008
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  20
+Degree of polynomial:  20
 Mean squared error on training data: 0.00137814
 Mean squared error on test data: 1944.86062977
-Degree of polynomial:  21
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  21
 Mean squared error on training data: 0.00118584
 Mean squared error on test data: 14716.58827236
 Degree of polynomial:  22
@@ -1662,12 +1672,12 @@ Mean squared error on test data: 877.21517262
 Degree of polynomial:  23
 Mean squared error on training data: 0.00085892
 Mean squared error on test data: 5567.04664255
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  24
+Degree of polynomial:  24
 Mean squared error on training data: 0.00084707
 Mean squared error on test data: 1325.26124692
-Degree of polynomial:  25
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  25
 Mean squared error on training data: 0.00079125
 Mean squared error on test data: 129012.83870189
 Degree of polynomial:  26
@@ -1676,19 +1686,19 @@ Mean squared error on test data: 18388.59354079
 Degree of polynomial:  27
 Mean squared error on training data: 0.00069123
 Mean squared error on test data: 2351.97979891
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  28
+Degree of polynomial:  28
 Mean squared error on training data: 0.00062592
 Mean squared error on test data: 3983.63037846
-Degree of polynomial:  29
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Degree of polynomial:  29
 Mean squared error on training data: 0.00060704
 Mean squared error on test data: 3262.26814548
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/626635268.py:73: RuntimeWarning: divide by zero encountered in log10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/626635268.py:73: RuntimeWarning: divide by zero encountered in log10
   plt.plot(polynomial, np.log10(trainingerror), label=&#39;Training Error&#39;)
-/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/626635268.py:74: RuntimeWarning: divide by zero encountered in log10
+/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/626635268.py:74: RuntimeWarning: divide by zero encountered in log10
   plt.plot(polynomial, np.log10(testerror), label=&#39;Test Error&#39;)
 </pre></div>
 </div>
@@ -1922,7 +1932,7 @@ cross-validation (LOOCV).</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/3817475779.py:63: RuntimeWarning: divide by zero encountered in log10
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/3817475779.py:63: RuntimeWarning: divide by zero encountered in log10
   plt.plot(polynomial, np.log10(estimated_mse_sklearn), label=&#39;Test Error&#39;)
 </pre></div>
 </div>
@@ -2811,7 +2821,7 @@ linear system as an equation would reduce this down to
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/4162706317.py:7: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/4162706317.py:7: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
   cb.ax.set_yticklabels(cb.ax.get_yticklabels(), fontsize=18)
 </pre></div>
 </div>
@@ -2955,7 +2965,7 @@ with the form utilized in linear regression, viz.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/3777801602.py:7: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/3777801602.py:7: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
   cb.ax.set_yticklabels(cb.ax.get_yticklabels(), fontsize=18)
 </pre></div>
 </div>
@@ -2995,7 +3005,7 @@ cost function is given by</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/438060758.py:10: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/438060758.py:10: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
   cb.ax.set_yticklabels(cb.ax.get_yticklabels(), fontsize=18)
 </pre></div>
 </div>
@@ -3030,7 +3040,7 @@ cost function is given by</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_64203/3544313922.py:9: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/td/3yk470mj5p931p9dtkk0y6jw0000gn/T/ipykernel_94076/3544313922.py:9: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
   cb.ax.set_yticklabels(cb.ax.get_yticklabels(), fontsize=18)
 </pre></div>
 </div>
@@ -3083,43 +3093,43 @@ constant as opposed to ridge and OLS. We get a sparse solution with
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                              | 0/10 [00:00&lt;?, ?it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                        | 0/10 [00:00&lt;?, ?it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/mhjensen/miniforge3/envs/myenv/lib/python3.9/site-packages/sklearn/linear_model/_coordinate_descent.py:628: ConvergenceWarning: Objective did not converge. You might want to increase the number of iterations, check the scale of the features or consider increasing regularisation. Duality gap: 3.924e+00, tolerance: 1.797e+00
   model = cd_fast.enet_coordinate_descent(
 
- 10%|█████████████▍                                                                                                                        | 1/10 [00:00&lt;00:07,  1.28it/s]
+ 10%|███████████▏                                                                                                    | 1/10 [00:00&lt;00:07,  1.17it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 20%|██████████████████████████▊                                                                                                           | 2/10 [00:01&lt;00:06,  1.27it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 20%|██████████████████████▍                                                                                         | 2/10 [00:01&lt;00:07,  1.12it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 30%|████████████████████████████████████████▏                                                                                             | 3/10 [00:02&lt;00:04,  1.43it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 30%|█████████████████████████████████▌                                                                              | 3/10 [00:02&lt;00:05,  1.33it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 40%|█████████████████████████████████████████████████████▌                                                                                | 4/10 [00:02&lt;00:03,  1.50it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 40%|████████████████████████████████████████████▊                                                                   | 4/10 [00:03&lt;00:04,  1.41it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|███████████████████████████████████████████████████████████████████                                                                   | 5/10 [00:03&lt;00:03,  1.48it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|████████████████████████████████████████████████████████                                                        | 5/10 [00:03&lt;00:03,  1.51it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 60%|████████████████████████████████████████████████████████████████████████████████▍                                                     | 6/10 [00:04&lt;00:02,  1.58it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 60%|███████████████████████████████████████████████████████████████████▏                                            | 6/10 [00:04&lt;00:02,  1.54it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 70%|█████████████████████████████████████████████████████████████████████████████████████████████▊                                        | 7/10 [00:04&lt;00:01,  1.51it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 70%|██████████████████████████████████████████████████████████████████████████████▍                                 | 7/10 [00:04&lt;00:01,  1.56it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 80%|███████████████████████████████████████████████████████████████████████████████████████████████████████████▏                          | 8/10 [00:05&lt;00:01,  1.55it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 80%|█████████████████████████████████████████████████████████████████████████████████████████▌                      | 8/10 [00:05&lt;00:01,  1.48it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 90%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▌             | 9/10 [00:05&lt;00:00,  1.64it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 90%|████████████████████████████████████████████████████████████████████████████████████████████████████▊           | 9/10 [00:06&lt;00:00,  1.43it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:06&lt;00:00,  1.62it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:06&lt;00:00,  1.52it/s]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:06&lt;00:00,  1.53it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████| 10/10 [00:06&lt;00:00,  1.45it/s]
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
