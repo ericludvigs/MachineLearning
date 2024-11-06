@@ -348,6 +348,16 @@ const thebe_selector_output = ".output, .cell_output"
    Exercises week 43
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week44.html">
+   Week 44,  Convolutional Neural Networks (CNN)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week45.html">
+   Week 45,  Convolutional Neural Networks (CCNs) and Recurrent Neural Networks (RNNs)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -1696,7 +1706,7 @@ Since we are not using <strong>Scikit-Learn</strong> here we can define our own 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9951746722640107
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9947527587517572
 </pre></div>
 </div>
 </div>
@@ -1713,7 +1723,7 @@ Since we are not using <strong>Scikit-Learn</strong> here we can define our own 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.011011355570628998
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.010439235860004352
 </pre></div>
 </div>
 </div>
@@ -1728,23 +1738,23 @@ Since we are not using <strong>Scikit-Learn</strong> here we can define our own 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.04642309 0.0279278  0.0228686  0.0650014  0.01290661 0.01519201
- 0.0016396  0.05684345 0.06249397 0.00778835 0.00518242 0.02159357
- 0.00421124 0.01267244 0.02280587 0.00184147 0.07626658 0.02041607
- 0.03238421 0.02937931 0.04215521 0.03179975 0.00508636 0.04983222
- 0.0705828  0.00555576 0.02882718 0.00046916 0.00861192 0.04145287
- 0.02255993 0.00567103 0.02731257 0.02307403 0.02643023 0.03374269
- 0.02728257 0.00045414 0.01269348 0.01433606 0.0031986  0.00813523
- 0.01677512 0.02132304 0.02971554 0.02671209 0.03110579 0.00701382
- 0.0281646  0.01167316 0.00049905 0.01368052 0.01667926 0.00935737
- 0.02496143 0.08648837 0.01394224 0.04394742 0.00582904 0.06185995
- 0.03162926 0.05276967 0.01028953 0.05735741 0.01571214 0.02287532
- 0.01947663 0.00861563 0.00414684 0.00858857 0.0036035  0.00523549
- 0.01608796 0.03520118 0.02959231 0.00068056 0.02717123 0.02989838
- 0.01203668 0.02622061 0.0109944  0.09258408 0.03607387 0.01775486
- 0.08931681 0.00514007 0.03450725 0.03465317 0.01712306 0.00757359
- 0.02069038 0.02243626 0.01508864 0.03202289 0.06776056 0.01054406
- 0.0169931  0.01784495 0.00962196 0.03370657]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.0048774  0.03000546 0.01406224 0.05284539 0.04788783 0.02130229
+ 0.02623134 0.0312189  0.00828271 0.0333264  0.01039127 0.04606288
+ 0.00142296 0.06417796 0.02234126 0.04466842 0.00261107 0.03529826
+ 0.03378921 0.0156846  0.02446687 0.00786113 0.06293914 0.01926522
+ 0.07425157 0.00050463 0.0262532  0.02488913 0.01273055 0.01047937
+ 0.00315702 0.01270269 0.01876257 0.01064438 0.00386265 0.04092917
+ 0.00922185 0.09242706 0.0525407  0.00986929 0.02216059 0.01901332
+ 0.00896715 0.00402758 0.00442984 0.04099237 0.0017715  0.04160022
+ 0.00999576 0.00218856 0.14483777 0.12286595 0.0149996  0.00194921
+ 0.00548026 0.01104374 0.00535653 0.05810465 0.0309014  0.00765756
+ 0.02954296 0.03077893 0.00995375 0.00133161 0.03530044 0.02867709
+ 0.00081442 0.00844629 0.03069367 0.01296443 0.03185121 0.02650658
+ 0.02861286 0.00404165 0.11084763 0.01832954 0.00300884 0.01447841
+ 0.00247535 0.03531926 0.07316645 0.00458923 0.05633629 0.02054047
+ 0.05805861 0.0313967  0.02247131 0.03145864 0.01764364 0.01408861
+ 0.035408   0.01927749 0.01439591 0.04600803 0.06175351 0.04317055
+ 0.00567929 0.00594615 0.03811479 0.00122361]
 </pre></div>
 </div>
 </div>
@@ -1813,15 +1823,15 @@ but now splitting the data into a training set and a test set.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.99804178 -0.16533342  5.68321093 -0.84401704  0.35781308]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 1.91347831  1.11445241  1.9118945   2.92213071 -0.82152512]
 Training R2
-0.9960664320362111
+0.9955496867333266
 Training MSE
-0.008377169630073601
+0.009741790670425911
 Test R2
-0.9944299733827195
+0.9962595442701554
 Test MSE
-0.01282028141098116
+0.007025375342852509
 </pre></div>
 </div>
 </div>
@@ -2484,7 +2494,9 @@ the aims is to reproduce Figure 2.11 of <a class="reference external" href="http
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MSE before scaling: 0.00
-R2 score before scaling 1.00
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R2 score before scaling 1.00
 Feature min values before scaling:
  [1.00000000e+00 6.97906022e-03 2.43639284e-03 4.87072815e-05
  1.70037324e-05 5.93601008e-06 3.39931051e-07 1.18670072e-07
