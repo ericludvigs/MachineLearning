@@ -1,24 +1,19 @@
-TITLE: Week 48: Support Vector Machines and Summary of course
-AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics, University of Oslo, Norway
+TITLE: Week 48: Gradient boosting  and summary of course
+AUTHOR: Morten Hjorth-Jensen {copyright, 1999-present|CC BY-NC} at Department of Physics and Center for Computing in Science Education, University of Oslo, Norway
 DATE: today
 
 !split
 ===== Overview of week 48 =====
 
+
 !split
-===== Plan for week 47 =====
-
-!bblock  Lab sessions on Tuesday and Wednesday
-  * Work and Discussion of project 3
-  * Last weekly exercise, 
-!eblock  
-
+===== Lecture Monday, November 25 =====
 !bblock Plans for the lecture Monday 25 November, with video suggestions etc
-o Bossting and gradient boosting and ensemble models
+o Boosting and gradient boosting and ensemble models
 o Summary of course
 o Readings and Videos:
-  o These lecture notes at URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week47/ipynb/week48.ipynb"
-  o See also lecture notes from week 47 at URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week46/ipynb/week47.ipynb". The lecture on Monday starts with a repetition on AdaBoost before we move over to gradient boosting with examples
+  o These lecture notes at URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week48/ipynb/week48.ipynb"
+  o See also lecture notes from week 47 at URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week47/ipynb/week47.ipynb". The lecture on Monday starts with a repetition on AdaBoost before we move over to gradient boosting with examples
 #  o Video of lecture at URL:"https://youtu.be/RIHzmLv05DA"
 #  o Whiteboard notes at URL:"https://github.com/CompPhysics/MachineLearning/blob/master/doc/HandWrittenNotes/2024/NotesNovember25.pdf"
   o Video on Decision trees URL:"https://www.youtube.com/watch?v=RmajweUFKvM&ab_channel=Simplilearn"
@@ -27,6 +22,139 @@ o Readings and Videos:
   o Video on Gradient boost, part 1, parts 2-4 follow thereafter URL:"https://www.youtube.com/watch?v=3CC4N4z3GJc"
   o Decision Trees: Rashcka et al chapter 3 pages 86-98, and chapter 7 on Ensemble methods, Voting and Bagging and Gradient Boosting. See also lecture from STK-IN4300, lecture 7 at URL:"https://www.uio.no/studier/emner/matnat/math/STK-IN4300/h20/slides/lecture_7.pdf". 
 !eblock
+
+
+!split
+===== Lab sessions =====
+!bblock  Lab sessions on Tuesday and Wednesday
+  * Work and Discussion of project 3
+  * Last weekly exercise
+  * Lab sessions at usual times.
+  * For the week of December 2-6, lab sessions start at 10am and end at 4pm, room FØ434, Tuesday and Wednesday
+!eblock  
+
+
+!split
+===== Random Forest Algorithm, reminder from last week =====
+
+
+The algorithm described here can be applied to both classification and regression problems.
+
+We will grow of forest of say $B$ trees.
+* For $b=1:B$
+  o Draw a bootstrap sample from the training data organized in our $\bm{X}$ matrix.
+  o We grow then a random forest tree $T_b$ based on the bootstrapped data by repeating the steps outlined till we reach the maximum node size is reached
+    o we select $m \le p$ variables at random from the $p$ predictors/features
+    o pick the best split point among the $m$ features using for example the CART algorithm and create a new node
+    o split the node into daughter nodes
+
+Finally we output then the ensemble of trees $\{T_b\}_1^{B}$ and make predictions for either a regression type of problem or a classification type of problem. 
+
+
+
+!split
+===== Random Forests Compared with other Methods on the Cancer Data =====
+
+
+!bc pycod 
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.model_selection import  train_test_split 
+from sklearn.datasets import load_breast_cancer
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegression
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import BaggingClassifier
+
+# Load the data
+cancer = load_breast_cancer()
+
+X_train, X_test, y_train, y_test = train_test_split(cancer.data,cancer.target,random_state=0)
+print(X_train.shape)
+print(X_test.shape)
+#define methods
+# Logistic Regression
+logreg = LogisticRegression(solver='lbfgs')
+# Support vector machine
+svm = SVC(gamma='auto', C=100)
+# Decision Trees
+deep_tree_clf = DecisionTreeClassifier(max_depth=None)
+#Scale the data
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train_scaled = scaler.transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+# Logistic Regression
+logreg.fit(X_train_scaled, y_train)
+print("Test set accuracy Logistic Regression with scaled data: {:.2f}".format(logreg.score(X_test_scaled,y_test)))
+# Support Vector Machine
+svm.fit(X_train_scaled, y_train)
+print("Test set accuracy SVM with scaled data: {:.2f}".format(logreg.score(X_test_scaled,y_test)))
+# Decision Trees
+deep_tree_clf.fit(X_train_scaled, y_train)
+print("Test set accuracy with Decision Trees and scaled data: {:.2f}".format(deep_tree_clf.score(X_test_scaled,y_test)))
+
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import cross_validate
+# Data set not specificied
+#Instantiate the model with 500 trees and entropy as splitting criteria
+Random_Forest_model = RandomForestClassifier(n_estimators=500,criterion="entropy")
+Random_Forest_model.fit(X_train_scaled, y_train)
+#Cross validation
+accuracy = cross_validate(Random_Forest_model,X_test_scaled,y_test,cv=10)['test_score']
+print(accuracy)
+print("Test set accuracy with Random Forests and scaled data: {:.2f}".format(Random_Forest_model.score(X_test_scaled,y_test)))
+
+
+import scikitplot as skplt
+y_pred = Random_Forest_model.predict(X_test_scaled)
+skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=True)
+plt.show()
+y_probas = Random_Forest_model.predict_proba(X_test_scaled)
+skplt.metrics.plot_roc(y_test, y_probas)
+plt.show()
+skplt.metrics.plot_cumulative_gain(y_test, y_probas)
+plt.show()
+
+!ec
+
+
+Recall that the cumulative gains curve shows the percentage of the
+overall number of cases in a given category *gained* by targeting a
+percentage of the total number of cases.
+
+Similarly, the receiver operating characteristic curve, or ROC curve,
+displays the diagnostic ability of a binary classifier system as its
+discrimination threshold is varied. It plots the true positive rate against the false positive rate.
+
+
+!split
+===== Compare  Bagging on Trees with Random Forests  =====
+!bc pycod
+bag_clf = BaggingClassifier(
+    DecisionTreeClassifier(splitter="random", max_leaf_nodes=16, random_state=42),
+    n_estimators=500, max_samples=1.0, bootstrap=True, n_jobs=-1, random_state=42)
+!ec
+
+
+
+!bc pycod
+bag_clf.fit(X_train, y_train)
+y_pred = bag_clf.predict(X_test)
+from sklearn.ensemble import RandomForestClassifier
+rnd_clf = RandomForestClassifier(n_estimators=500, max_leaf_nodes=16, n_jobs=-1, random_state=42)
+rnd_clf.fit(X_train, y_train)
+y_pred_rf = rnd_clf.predict(X_test)
+np.sum(y_pred == y_pred_rf) / len(y_pred) 
+!ec
+
+
+
+
+
 
 
 
@@ -562,7 +690,6 @@ plt.plot(polydegree, error, label='Error')
 plt.plot(polydegree, bias, label='bias')
 plt.plot(polydegree, variance, label='Variance')
 plt.legend()
-save_fig("gdregression")
 plt.show()
 !ec
 
@@ -601,14 +728,11 @@ print("Test set accuracy with Gradient boosting and scaled data: {:.2f}".format(
 import scikitplot as skplt
 y_pred = gd_clf.predict(X_test_scaled)
 skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=True)
-save_fig("gdclassiffierconfusion")
 plt.show()
 y_probas = gd_clf.predict_proba(X_test_scaled)
 skplt.metrics.plot_roc(y_test, y_probas)
-save_fig("gdclassiffierroc")
 plt.show()
 skplt.metrics.plot_cumulative_gain(y_test, y_probas)
-save_fig("gdclassiffiercgain")
 plt.show()
 !ec
 
@@ -630,53 +754,6 @@ sketch for efficient proposal calculation. It introduces a novel sparsity-aware 
 
 It is now the algorithm which wins essentially all ML competitions!!!
 
-!split
-===== Regression Case =====
-
-!bc pycod
-import matplotlib.pyplot as plt
-import numpy as np
-from sklearn.model_selection import train_test_split
-import xgboost as xgb
-import scikitplot as skplt
-from sklearn.metrics import mean_squared_error
-
-n = 100
-maxdegree = 6
-
-# Make data set.
-x = np.linspace(-3, 3, n).reshape(-1, 1)
-y = np.exp(-x**2) + 1.5 * np.exp(-(x-2)**2)+ np.random.normal(0, 0.1, x.shape)
-
-error = np.zeros(maxdegree)
-bias = np.zeros(maxdegree)
-variance = np.zeros(maxdegree)
-polydegree = np.zeros(maxdegree)
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
-
-for degree in range(maxdegree):
-    model =  xgb.XGBRegressor(objective ='reg:squarederror', colsaobjective ='reg:squarederror', colsample_bytree = 0.3, learning_rate = 0.1,max_depth = degree, alpha = 10, n_estimators = 200)
-
-    model.fit(X_train,y_train)
-    y_pred = model.predict(X_test)
-    polydegree[degree] = degree
-    error[degree] = np.mean( np.mean((y_test - y_pred)**2) )
-    bias[degree] = np.mean( (y_test - np.mean(y_pred))**2 )
-    variance[degree] = np.mean( np.var(y_pred) )
-    print('Max depth:', degree)
-    print('Error:', error[degree])
-    print('Bias^2:', bias[degree])
-    print('Var:', variance[degree])
-    print('{} >= {} + {} = {}'.format(error[degree], bias[degree], variance[degree], bias[degree]+variance[degree]))
-
-plt.xlim(1,maxdegree-1)
-plt.plot(polydegree, error, label='Error')
-plt.plot(polydegree, bias, label='bias')
-plt.plot(polydegree, variance, label='Variance')
-plt.legend()
-plt.show()
-
-!ec
 
 !split
 ===== Xgboost on the Cancer Data =====
@@ -715,25 +792,20 @@ print("Test set accuracy with Gradient Boosting and scaled data: {:.2f}".format(
 import scikitplot as skplt
 y_pred = xg_clf.predict(X_test_scaled)
 skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=True)
-save_fig("xdclassiffierconfusion")
 plt.show()
 y_probas = xg_clf.predict_proba(X_test_scaled)
 skplt.metrics.plot_roc(y_test, y_probas)
-save_fig("xdclassiffierroc")
 plt.show()
 skplt.metrics.plot_cumulative_gain(y_test, y_probas)
-save_fig("gdclassiffiercgain")
 plt.show()
 
 
 xgb.plot_tree(xg_clf,num_trees=0)
 plt.rcParams['figure.figsize'] = [50, 10]
-save_fig("xgtree")
 plt.show()
 
 xgb.plot_importance(xg_clf)
 plt.rcParams['figure.figsize'] = [5, 5]
-save_fig("xgparams")
 plt.show()
 
 !ec
@@ -852,27 +924,26 @@ o Central elements from linear algebra, matrix inversion and SVD
 o Gradient methods for data optimization
 o Estimation of errors using cross-validation, bootstrapping and jackknife methods;
 o Practical optimization using Singular-value decomposition and least squares for parameterizing data.
-o Principal Component Analysis to reduce the number of features.
+o Not discussed: Principal Component Analysis to reduce the number of features.
 
 !split
 ===== Machine learning =====
 
-The following topics will be covered
-o Linear methods for regression and classification:
+* Linear methods for regression and classification:
   o Ordinary Least Squares
   o Ridge regression
   o Lasso regression
   o Logistic regression
-o Neural networks and deep learning:
+* Neural networks and deep learning:
   o Feed Forward Neural Networks
   o Convolutional Neural Networks
   o Recurrent Neural Networks
-o Decisions trees and ensemble methods:
+* Decisions trees and ensemble methods:
   o Decision trees
   o Bagging and voting
   o Random forests
   o Boosting and gradient boosting
-o Support vector machines
+* Not discussed this year: Support vector machines
   o Binary classification and multiclass classification
   o Kernel methods
   o Regression
@@ -894,11 +965,11 @@ ethical conduct is emphasized throughout the course.
 * Understand linear methods for regression and classification;
 * Learn about neural network;
 * Learn about bagging, boosting and trees
-* Support vector machines
+#* Support vector machines
 * Learn about basic data analysis;
 * Be capable of extending the acquired knowledge to other systems and cases;
 * Have an understanding of central algorithms used in data analysis and machine learning;
-* Work on numerical projects to illustrate the theory. The projects play a central role and you are expected to know modern programming languages like Python or C++.
+* Work on numerical projects to illustrate the theory. The projects play a central role.
 
 
 
@@ -906,7 +977,7 @@ ethical conduct is emphasized throughout the course.
 ===== Perspective on Machine Learning =====
 
 o Rapidly emerging application area
-o Experiment AND theory are evolving in many many fields. Still many low-hanging fruits.
+o Experiment AND theory are evolving in many many fields. 
 o Requires education/retraining for more widespread adoption
 o A lot of “word-of-mouth” development methods
 
@@ -933,7 +1004,7 @@ o "Follow ML on ArXiv":"https://arxiv.org/list/cs.LG/recent"
 
 o Identify problem type: classification, regression
 o Consider your data carefully
-o Choose a simple model that fits 1. and 2.
+o Choose a simple model that fits 1 and 2
 o Consider your data carefully again! Think of data representation more carefully.
 o Based on your results, feedback loop to earliest possible point
 
@@ -943,43 +1014,41 @@ o Based on your results, feedback loop to earliest possible point
 !split
 ===== Choose a Model and Algorithm  =====
 
-o Supervised?
-o Start with the simplest model that fits your problem
-o Start with minimal processing of data
+* Supervised?
+* Start with the simplest model that fits your problem
+* Start with minimal processing of data
 
 !split
 ===== Preparing Your Data =====
 
-o Shuffle your data
-o Mean center your data
+* Shuffle your data
+* Mean center your data
   * Why?
-o Normalize the variance
+* Normalize the variance
   * Why?
-o _Whitening_
+* _Whitening_
   * Decorrelates data
   * Can be hit or miss
-o  When to do train/test split?
+*  When to do train/test split?
 
 
 !split
-=====  Which Activation and Weights to Choose in Neural Networks =====
+=====  Which activation and weights to choose in neural networks =====
 
-o RELU? ELU?
-o Sigmoid or Tanh?
-o Set all weights to 0?
-  * Terrible idea
-o Set all weights to random values?
-  * Small random values
+* RELU? ELU? GELU? etc
+* Sigmoid or Tanh?
+* Set all weights to 0? Terrible idea
+* Set all weights to random values? Small random values
 
 
 !split
 ===== Optimization Methods and Hyperparameters =====
-o Stochastic gradient descent
-o  Stochastic gradient descent + momentum
-o State-of-the-art approaches:
-  * RMSProp
-  * Adam
-  * and more
+* Stochastic gradient descent
+*  Stochastic gradient descent + momentum
+* State-of-the-art approaches:
+  o RMSProp
+  o Adam
+  o and more
 
 Which regularization and hyperparameters? $L_1$ or $L_2$, soft
 classifiers, depths of trees and many other. Need to explore a large
@@ -999,16 +1068,16 @@ o Jackknife and many other
 !split
 ===== Other courses on Data science and Machine Learning  at UiO =====
 
-The link here URL:"https://www.mn.uio.no/english/research/about/centre-focus/innovation/data-science/studies/"  gives an excellent overview of courses on Machine learning at UiO.
-
-o "STK2100 Machine learning and statistical methods for prediction and classification":"http://www.uio.no/studier/emner/matnat/math/STK2100/index-eng.html". 
-o "IN3050/IN4050 Introduction to Artificial Intelligence and Machine Learning":"https://www.uio.no/studier/emner/matnat/ifi/IN3050/index-eng.html". Introductory course in machine learning and AI with an algorithmic approach. 
+o "FYS5429 – Advanced machine learning and data analysis for the physical sciences":"https://www.uio.no/studier/emner/matnat/fys/FYS5429/index-eng.html"
+o "IN3050/IN4050 Introduction to Artificial Intelligence and Machine Learning":"https://www.uio.no/studier/emner/matnat/ifi/IN3050/index-eng.html". Introductory course in machine learning and AI
 o "STK-INF3000/4000 Selected Topics in Data Science":"http://www.uio.no/studier/emner/matnat/math/STK-INF3000/index-eng.html". The course provides insight into selected contemporary relevant topics within Data Science. 
 o "IN4080 Natural Language Processing":"https://www.uio.no/studier/emner/matnat/ifi/IN4080/index.html". Probabilistic and machine learning techniques applied to natural language processing. 
 o "STK-IN4300 – Statistical learning methods in Data Science":"https://www.uio.no/studier/emner/matnat/math/STK-IN4300/index-eng.html". An advanced introduction to statistical and machine learning. For students with a good mathematics and statistics background.
-o "IN-STK5000  Adaptive Methods for Data-Based Decision Making":"https://www.uio.no/studier/emner/matnat/ifi/IN-STK5000/index-eng.html". Methods for adaptive collection and processing of data based on machine learning techniques. 
-o "IN5400/INF5860 – Machine Learning for Image Analysis":"https://www.uio.no/studier/emner/matnat/ifi/IN5400/". An introduction to deep learning with particular emphasis on applications within Image analysis, but useful for other application areas too.
-o "TEK5040 – Dyp læring for autonome systemer":"https://www.uio.no/studier/emner/matnat/its/TEK5040/". The course addresses advanced algorithms and architectures for deep learning with neural networks. The course provides an introduction to how deep-learning techniques can be used in the construction of key parts of advanced autonomous systems that exist in physical environments and cyber environments.
+o "IN-STK5000  Responsible Data Science":"https://www.uio.no/studier/emner/matnat/ifi/IN-STK5000/index-eng.html". Methods for adaptive collection and processing of data based on machine learning techniques. 
+o "IN4310 – Machine Learning for Image Analysis":"https://www.uio.no/studier/emner/matnat/ifi/IN4310/index.html". An introduction to deep learning with particular emphasis on applications within Image analysis, but useful for other application areas too.
+o "IN5310 – Advanced Deep Learning for Image Analysis":"https://www.uio.no/studier/emner/matnat/ifi/IN5310/index.html"
+o "IN5490 – Advanced Topics in Artificial Intelligence for Intelligent Systems":"https://www.uio.no/studier/emner/matnat/ifi/IN5490/index.html"
+o "TEK5040 – Deep learning for autonomous systems":"https://www.uio.no/studier/emner/matnat/its/TEK5040/". The course addresses advanced algorithms and architectures for deep learning with neural networks. The course provides an introduction to how deep-learning techniques can be used in the construction of key parts of advanced autonomous systems that exist in physical environments and cyber environments.
 
 !split
 ===== Additional courses of interest =====
@@ -1531,6 +1600,7 @@ topics. Together, we will not just predict the future, but create it.
 =====  Best wishes to you all and thanks so much for your heroic efforts this semester =====
 
 FIGURE: [figures/Nebbdyr2.png, width=500 frac=0.6]
+
 
 
 

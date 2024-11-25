@@ -9,8 +9,8 @@ doconce format html week48-reveal.html week48-reveal reveal --html_slide_theme=b
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="DocOnce: https://github.com/doconce/doconce/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Week 48: Support Vector Machines and Summary of course">
-<title>Week 48: Support Vector Machines and Summary of course</title>
+<meta name="description" content="Week 48: Gradient boosting  and summary of course">
+<title>Week 48: Gradient boosting  and summary of course</title>
 
 <!-- reveal.js: https://lab.hakim.se/reveal-js/ -->
 
@@ -168,7 +168,7 @@ MathJax.Hub.Config({
 <section>
 <!-- ------------------- main content ---------------------- -->
 <center>
-<h1 style="text-align: center;">Week 48: Support Vector Machines and Summary of course</h1>
+<h1 style="text-align: center;">Week 48: Gradient boosting  and summary of course</h1>
 </center>  <!-- document title -->
 
 <!-- author(s): Morten Hjorth-Jensen -->
@@ -177,11 +177,11 @@ MathJax.Hub.Config({
 </center>
 <!-- institution -->
 <center>
-<b>Department of Physics, University of Oslo, Norway</b>
+<b>Department of Physics and Center for Computing in Science Education, University of Oslo, Norway</b>
 </center>
 <br>
 <center>
-<h4>Nov 21, 2024</h4>
+<h4>Nov 24, 2024</h4>
 </center> <!-- date -->
 <br>
 
@@ -196,30 +196,17 @@ MathJax.Hub.Config({
 </section>
 
 <section>
-<h2 id="plan-for-week-47">Plan for week 47 </h2>
-
-<div class="alert alert-block alert-block alert-text-normal">
-<b>Lab sessions on Tuesday and Wednesday</b>
-<p>
-<ul>
-
-<p><li> Work and Discussion of project 3</li>
-
-<p><li> Last weekly exercise,</li> 
-</ul>
-</div>
-  
-
+<h2 id="lecture-monday-november-25">Lecture Monday, November 25 </h2>
 <div class="alert alert-block alert-block alert-text-normal">
 <b>Plans for the lecture Monday 25 November, with video suggestions etc</b>
 <p>
 <ol>
-<p><li> Bossting and gradient boosting and ensemble models</li>
+<p><li> Boosting and gradient boosting and ensemble models</li>
 <p><li> Summary of course</li>
 <p><li> Readings and Videos:
 <ol type="a"></li>
- <p><li> These lecture notes at <a href="https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week47/ipynb/week48.ipynb" target="_blank"><tt>https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week47/ipynb/week48.ipynb</tt></a></li>
- <p><li> See also lecture notes from week 47 at <a href="https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week46/ipynb/week47.ipynb" target="_blank"><tt>https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week46/ipynb/week47.ipynb</tt></a>. The lecture on Monday starts with a repetition on AdaBoost before we move over to gradient boosting with examples
+ <p><li> These lecture notes at <a href="https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week48/ipynb/week48.ipynb" target="_blank"><tt>https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week48/ipynb/week48.ipynb</tt></a></li>
+ <p><li> See also lecture notes from week 47 at <a href="https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week47/ipynb/week47.ipynb" target="_blank"><tt>https://github.com/CompPhysics/MachineLearning/blob/master/doc/pub/week47/ipynb/week47.ipynb</tt></a>. The lecture on Monday starts with a repetition on AdaBoost before we move over to gradient boosting with examples
 <!-- o Video of lecture at <a href="https://youtu.be/RIHzmLv05DA" target="_blank"><tt>https://youtu.be/RIHzmLv05DA</tt></a> -->
 <!-- o Whiteboard notes at <a href="https://github.com/CompPhysics/MachineLearning/blob/master/doc/HandWrittenNotes/2024/NotesNovember25.pdf" target="_blank"><tt>https://github.com/CompPhysics/MachineLearning/blob/master/doc/HandWrittenNotes/2024/NotesNovember25.pdf</tt></a> --></li>
  <p><li> Video on Decision trees <a href="https://www.youtube.com/watch?v=RmajweUFKvM&ab_channel=Simplilearn" target="_blank"><tt>https://www.youtube.com/watch?v=RmajweUFKvM&ab_channel=Simplilearn</tt></a></li>
@@ -230,6 +217,202 @@ MathJax.Hub.Config({
 </ol>
 <p>
 </ol>
+</div>
+</section>
+
+<section>
+<h2 id="lab-sessions">Lab sessions </h2>
+<div class="alert alert-block alert-block alert-text-normal">
+<b>Lab sessions on Tuesday and Wednesday</b>
+<p>
+<ul>
+
+<p><li> Work and Discussion of project 3</li>
+
+<p><li> Last weekly exercise</li>
+
+<p><li> Lab sessions at usual times.</li>
+
+<p><li> For the week of December 2-6, lab sessions start at 10am and end at 4pm, room F&#216;434, Tuesday and Wednesday</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2 id="random-forest-algorithm-reminder-from-last-week">Random Forest Algorithm, reminder from last week </h2>
+
+<p>The algorithm described here can be applied to both classification and regression problems.</p>
+
+<p>We will grow of forest of say \( B \) trees.</p>
+<ul>
+<p><li> For \( b=1:B \)
+<ol type="a"></li>
+ <p><li> Draw a bootstrap sample from the training data organized in our \( \boldsymbol{X} \) matrix.</li>
+ <p><li> We grow then a random forest tree \( T_b \) based on the bootstrapped data by repeating the steps outlined till we reach the maximum node size is reached</li>
+<ol>
+
+<p><li> we select \( m \le p \) variables at random from the \( p \) predictors/features</li>
+
+<p><li> pick the best split point among the \( m \) features using for example the CART algorithm and create a new node</li>
+
+<p><li> split the node into daughter nodes</li>
+</ol>
+<p>
+</ol>
+<p>
+</ul>
+<p>
+<p>Finally we output then the ensemble of trees \( \{T_b\}_1^{B} \) and make predictions for either a regression type of problem or a classification type of problem. </p>
+</section>
+
+<section>
+<h2 id="random-forests-compared-with-other-methods-on-the-cancer-data">Random Forests Compared with other Methods on the Cancer Data </h2>
+
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="cell border-box-sizing code_cell rendered">
+  <div class="input">
+    <div class="inner_cell">
+      <div class="input_area">
+        <div class="highlight" style="background: #eeeedd">
+  <pre style="font-size: 80%; line-height: 125%;"><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">matplotlib.pyplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">plt</span>
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.model_selection</span> <span style="color: #8B008B; font-weight: bold">import</span>  train_test_split 
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.datasets</span> <span style="color: #8B008B; font-weight: bold">import</span> load_breast_cancer
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.svm</span> <span style="color: #8B008B; font-weight: bold">import</span> SVC
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.linear_model</span> <span style="color: #8B008B; font-weight: bold">import</span> LogisticRegression
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.tree</span> <span style="color: #8B008B; font-weight: bold">import</span> DecisionTreeClassifier
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.ensemble</span> <span style="color: #8B008B; font-weight: bold">import</span> BaggingClassifier
+
+<span style="color: #228B22"># Load the data</span>
+cancer = load_breast_cancer()
+
+X_train, X_test, y_train, y_test = train_test_split(cancer.data,cancer.target,random_state=<span style="color: #B452CD">0</span>)
+<span style="color: #658b00">print</span>(X_train.shape)
+<span style="color: #658b00">print</span>(X_test.shape)
+<span style="color: #228B22">#define methods</span>
+<span style="color: #228B22"># Logistic Regression</span>
+logreg = LogisticRegression(solver=<span style="color: #CD5555">&#39;lbfgs&#39;</span>)
+<span style="color: #228B22"># Support vector machine</span>
+svm = SVC(gamma=<span style="color: #CD5555">&#39;auto&#39;</span>, C=<span style="color: #B452CD">100</span>)
+<span style="color: #228B22"># Decision Trees</span>
+deep_tree_clf = DecisionTreeClassifier(max_depth=<span style="color: #8B008B; font-weight: bold">None</span>)
+<span style="color: #228B22">#Scale the data</span>
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.preprocessing</span> <span style="color: #8B008B; font-weight: bold">import</span> StandardScaler
+scaler = StandardScaler()
+scaler.fit(X_train)
+X_train_scaled = scaler.transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+<span style="color: #228B22"># Logistic Regression</span>
+logreg.fit(X_train_scaled, y_train)
+<span style="color: #658b00">print</span>(<span style="color: #CD5555">&quot;Test set accuracy Logistic Regression with scaled data: {:.2f}&quot;</span>.format(logreg.score(X_test_scaled,y_test)))
+<span style="color: #228B22"># Support Vector Machine</span>
+svm.fit(X_train_scaled, y_train)
+<span style="color: #658b00">print</span>(<span style="color: #CD5555">&quot;Test set accuracy SVM with scaled data: {:.2f}&quot;</span>.format(logreg.score(X_test_scaled,y_test)))
+<span style="color: #228B22"># Decision Trees</span>
+deep_tree_clf.fit(X_train_scaled, y_train)
+<span style="color: #658b00">print</span>(<span style="color: #CD5555">&quot;Test set accuracy with Decision Trees and scaled data: {:.2f}&quot;</span>.format(deep_tree_clf.score(X_test_scaled,y_test)))
+
+
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.ensemble</span> <span style="color: #8B008B; font-weight: bold">import</span> RandomForestClassifier
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.preprocessing</span> <span style="color: #8B008B; font-weight: bold">import</span> LabelEncoder
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.model_selection</span> <span style="color: #8B008B; font-weight: bold">import</span> cross_validate
+<span style="color: #228B22"># Data set not specificied</span>
+<span style="color: #228B22">#Instantiate the model with 500 trees and entropy as splitting criteria</span>
+Random_Forest_model = RandomForestClassifier(n_estimators=<span style="color: #B452CD">500</span>,criterion=<span style="color: #CD5555">&quot;entropy&quot;</span>)
+Random_Forest_model.fit(X_train_scaled, y_train)
+<span style="color: #228B22">#Cross validation</span>
+accuracy = cross_validate(Random_Forest_model,X_test_scaled,y_test,cv=<span style="color: #B452CD">10</span>)[<span style="color: #CD5555">&#39;test_score&#39;</span>]
+<span style="color: #658b00">print</span>(accuracy)
+<span style="color: #658b00">print</span>(<span style="color: #CD5555">&quot;Test set accuracy with Random Forests and scaled data: {:.2f}&quot;</span>.format(Random_Forest_model.score(X_test_scaled,y_test)))
+
+
+<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">scikitplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">skplt</span>
+y_pred = Random_Forest_model.predict(X_test_scaled)
+skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=<span style="color: #8B008B; font-weight: bold">True</span>)
+plt.show()
+y_probas = Random_Forest_model.predict_proba(X_test_scaled)
+skplt.metrics.plot_roc(y_test, y_probas)
+plt.show()
+skplt.metrics.plot_cumulative_gain(y_test, y_probas)
+plt.show()
+</pre>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="output_wrapper">
+    <div class="output">
+      <div class="output_area">
+        <div class="output_subarea output_stream output_stdout output_text">          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Recall that the cumulative gains curve shows the percentage of the
+overall number of cases in a given category <em>gained</em> by targeting a
+percentage of the total number of cases.
+</p>
+
+<p>Similarly, the receiver operating characteristic curve, or ROC curve,
+displays the diagnostic ability of a binary classifier system as its
+discrimination threshold is varied. It plots the true positive rate against the false positive rate.
+</p>
+</section>
+
+<section>
+<h2 id="compare-bagging-on-trees-with-random-forests">Compare  Bagging on Trees with Random Forests  </h2>
+
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="cell border-box-sizing code_cell rendered">
+  <div class="input">
+    <div class="inner_cell">
+      <div class="input_area">
+        <div class="highlight" style="background: #eeeedd">
+  <pre style="font-size: 80%; line-height: 125%;">bag_clf = BaggingClassifier(
+    DecisionTreeClassifier(splitter=<span style="color: #CD5555">&quot;random&quot;</span>, max_leaf_nodes=<span style="color: #B452CD">16</span>, random_state=<span style="color: #B452CD">42</span>),
+    n_estimators=<span style="color: #B452CD">500</span>, max_samples=<span style="color: #B452CD">1.0</span>, bootstrap=<span style="color: #8B008B; font-weight: bold">True</span>, n_jobs=-<span style="color: #B452CD">1</span>, random_state=<span style="color: #B452CD">42</span>)
+</pre>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="output_wrapper">
+    <div class="output">
+      <div class="output_area">
+        <div class="output_subarea output_stream output_stdout output_text">          
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
+<div class="cell border-box-sizing code_cell rendered">
+  <div class="input">
+    <div class="inner_cell">
+      <div class="input_area">
+        <div class="highlight" style="background: #eeeedd">
+  <pre style="font-size: 80%; line-height: 125%;">bag_clf.fit(X_train, y_train)
+y_pred = bag_clf.predict(X_test)
+<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.ensemble</span> <span style="color: #8B008B; font-weight: bold">import</span> RandomForestClassifier
+rnd_clf = RandomForestClassifier(n_estimators=<span style="color: #B452CD">500</span>, max_leaf_nodes=<span style="color: #B452CD">16</span>, n_jobs=-<span style="color: #B452CD">1</span>, random_state=<span style="color: #B452CD">42</span>)
+rnd_clf.fit(X_train, y_train)
+y_pred_rf = rnd_clf.predict(X_test)
+np.sum(y_pred == y_pred_rf) / <span style="color: #658b00">len</span>(y_pred) 
+</pre>
+</div>
+      </div>
+    </div>
+  </div>
+  <div class="output_wrapper">
+    <div class="output">
+      <div class="output_area">
+        <div class="output_subarea output_stream output_stdout output_text">          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -865,7 +1048,6 @@ plt.plot(polydegree, error, label=<span style="color: #CD5555">&#39;Error&#39;</
 plt.plot(polydegree, bias, label=<span style="color: #CD5555">&#39;bias&#39;</span>)
 plt.plot(polydegree, variance, label=<span style="color: #CD5555">&#39;Variance&#39;</span>)
 plt.legend()
-save_fig(<span style="color: #CD5555">&quot;gdregression&quot;</span>)
 plt.show()
 </pre>
 </div>
@@ -923,14 +1105,11 @@ accuracy = cross_validate(gd_clf,X_test_scaled,y_test,cv=<span style="color: #B4
 <span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">scikitplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">skplt</span>
 y_pred = gd_clf.predict(X_test_scaled)
 skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=<span style="color: #8B008B; font-weight: bold">True</span>)
-save_fig(<span style="color: #CD5555">&quot;gdclassiffierconfusion&quot;</span>)
 plt.show()
 y_probas = gd_clf.predict_proba(X_test_scaled)
 skplt.metrics.plot_roc(y_test, y_probas)
-save_fig(<span style="color: #CD5555">&quot;gdclassiffierroc&quot;</span>)
 plt.show()
 skplt.metrics.plot_cumulative_gain(y_test, y_probas)
-save_fig(<span style="color: #CD5555">&quot;gdclassiffiercgain&quot;</span>)
 plt.show()
 </pre>
 </div>
@@ -965,73 +1144,6 @@ sketch for efficient proposal calculation. It introduces a novel sparsity-aware 
 </p>
 
 <p>It is now the algorithm which wins essentially all ML competitions!!!</p>
-</section>
-
-<section>
-<h2 id="regression-case">Regression Case </h2>
-
-
-<!-- code=python (!bc pycod) typeset with pygments style "perldoc" -->
-<div class="cell border-box-sizing code_cell rendered">
-  <div class="input">
-    <div class="inner_cell">
-      <div class="input_area">
-        <div class="highlight" style="background: #eeeedd">
-  <pre style="font-size: 80%; line-height: 125%;"><span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">matplotlib.pyplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">plt</span>
-<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">numpy</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">np</span>
-<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.model_selection</span> <span style="color: #8B008B; font-weight: bold">import</span> train_test_split
-<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">xgboost</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">xgb</span>
-<span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">scikitplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">skplt</span>
-<span style="color: #8B008B; font-weight: bold">from</span> <span style="color: #008b45; text-decoration: underline">sklearn.metrics</span> <span style="color: #8B008B; font-weight: bold">import</span> mean_squared_error
-
-n = <span style="color: #B452CD">100</span>
-maxdegree = <span style="color: #B452CD">6</span>
-
-<span style="color: #228B22"># Make data set.</span>
-x = np.linspace(-<span style="color: #B452CD">3</span>, <span style="color: #B452CD">3</span>, n).reshape(-<span style="color: #B452CD">1</span>, <span style="color: #B452CD">1</span>)
-y = np.exp(-x**<span style="color: #B452CD">2</span>) + <span style="color: #B452CD">1.5</span> * np.exp(-(x-<span style="color: #B452CD">2</span>)**<span style="color: #B452CD">2</span>)+ np.random.normal(<span style="color: #B452CD">0</span>, <span style="color: #B452CD">0.1</span>, x.shape)
-
-error = np.zeros(maxdegree)
-bias = np.zeros(maxdegree)
-variance = np.zeros(maxdegree)
-polydegree = np.zeros(maxdegree)
-X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=<span style="color: #B452CD">0.2</span>)
-
-<span style="color: #8B008B; font-weight: bold">for</span> degree <span style="color: #8B008B">in</span> <span style="color: #658b00">range</span>(maxdegree):
-    model =  xgb.XGBRegressor(objective =<span style="color: #CD5555">&#39;reg:squarederror&#39;</span>, colsaobjective =<span style="color: #CD5555">&#39;reg:squarederror&#39;</span>, colsample_bytree = <span style="color: #B452CD">0.3</span>, learning_rate = <span style="color: #B452CD">0.1</span>,max_depth = degree, alpha = <span style="color: #B452CD">10</span>, n_estimators = <span style="color: #B452CD">200</span>)
-
-    model.fit(X_train,y_train)
-    y_pred = model.predict(X_test)
-    polydegree[degree] = degree
-    error[degree] = np.mean( np.mean((y_test - y_pred)**<span style="color: #B452CD">2</span>) )
-    bias[degree] = np.mean( (y_test - np.mean(y_pred))**<span style="color: #B452CD">2</span> )
-    variance[degree] = np.mean( np.var(y_pred) )
-    <span style="color: #658b00">print</span>(<span style="color: #CD5555">&#39;Max depth:&#39;</span>, degree)
-    <span style="color: #658b00">print</span>(<span style="color: #CD5555">&#39;Error:&#39;</span>, error[degree])
-    <span style="color: #658b00">print</span>(<span style="color: #CD5555">&#39;Bias^2:&#39;</span>, bias[degree])
-    <span style="color: #658b00">print</span>(<span style="color: #CD5555">&#39;Var:&#39;</span>, variance[degree])
-    <span style="color: #658b00">print</span>(<span style="color: #CD5555">&#39;{} &gt;= {} + {} = {}&#39;</span>.format(error[degree], bias[degree], variance[degree], bias[degree]+variance[degree]))
-
-plt.xlim(<span style="color: #B452CD">1</span>,maxdegree-<span style="color: #B452CD">1</span>)
-plt.plot(polydegree, error, label=<span style="color: #CD5555">&#39;Error&#39;</span>)
-plt.plot(polydegree, bias, label=<span style="color: #CD5555">&#39;bias&#39;</span>)
-plt.plot(polydegree, variance, label=<span style="color: #CD5555">&#39;Variance&#39;</span>)
-plt.legend()
-plt.show()
-</pre>
-</div>
-      </div>
-    </div>
-  </div>
-  <div class="output_wrapper">
-    <div class="output">
-      <div class="output_area">
-        <div class="output_subarea output_stream output_stdout output_text">          
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </section>
 
 <section>
@@ -1076,25 +1188,20 @@ y_test = xg_clf.predict(X_test_scaled)
 <span style="color: #8B008B; font-weight: bold">import</span> <span style="color: #008b45; text-decoration: underline">scikitplot</span> <span style="color: #8B008B; font-weight: bold">as</span> <span style="color: #008b45; text-decoration: underline">skplt</span>
 y_pred = xg_clf.predict(X_test_scaled)
 skplt.metrics.plot_confusion_matrix(y_test, y_pred, normalize=<span style="color: #8B008B; font-weight: bold">True</span>)
-save_fig(<span style="color: #CD5555">&quot;xdclassiffierconfusion&quot;</span>)
 plt.show()
 y_probas = xg_clf.predict_proba(X_test_scaled)
 skplt.metrics.plot_roc(y_test, y_probas)
-save_fig(<span style="color: #CD5555">&quot;xdclassiffierroc&quot;</span>)
 plt.show()
 skplt.metrics.plot_cumulative_gain(y_test, y_probas)
-save_fig(<span style="color: #CD5555">&quot;gdclassiffiercgain&quot;</span>)
 plt.show()
 
 
 xgb.plot_tree(xg_clf,num_trees=<span style="color: #B452CD">0</span>)
 plt.rcParams[<span style="color: #CD5555">&#39;figure.figsize&#39;</span>] = [<span style="color: #B452CD">50</span>, <span style="color: #B452CD">10</span>]
-save_fig(<span style="color: #CD5555">&quot;xgtree&quot;</span>)
 plt.show()
 
 xgb.plot_importance(xg_clf)
 plt.rcParams[<span style="color: #CD5555">&#39;figure.figsize&#39;</span>] = [<span style="color: #B452CD">5</span>, <span style="color: #B452CD">5</span>]
-save_fig(<span style="color: #CD5555">&quot;xgparams&quot;</span>)
 plt.show()
 </pre>
 </div>
@@ -1249,15 +1356,14 @@ plt.show()
 <p><li> Gradient methods for data optimization</li>
 <p><li> Estimation of errors using cross-validation, bootstrapping and jackknife methods;</li>
 <p><li> Practical optimization using Singular-value decomposition and least squares for parameterizing data.</li>
-<p><li> Principal Component Analysis to reduce the number of features.</li>
+<p><li> Not discussed: Principal Component Analysis to reduce the number of features.</li>
 </ol>
 </section>
 
 <section>
 <h2 id="machine-learning">Machine learning </h2>
 
-<p>The following topics will be covered</p>
-<ol>
+<ul>
 <p><li> Linear methods for regression and classification:
 <ol type="a"></li>
  <p><li> Ordinary Least Squares</li>
@@ -1281,14 +1387,14 @@ plt.show()
  <p><li> Boosting and gradient boosting</li>
 </ol>
 <p>
-<p><li> Support vector machines
+<p><li> Not discussed this year: Support vector machines
 <ol type="a"></li>
  <p><li> Binary classification and multiclass classification</li>
  <p><li> Kernel methods</li>
  <p><li> Regression</li>
 </ol>
 <p>
-</ol>
+</ul>
 </section>
 
 <section>
@@ -1308,12 +1414,12 @@ ethical conduct is emphasized throughout the course.
 <ul>
 <p><li> Understand linear methods for regression and classification;</li>
 <p><li> Learn about neural network;</li>
-<p><li> Learn about bagging, boosting and trees</li>
-<p><li> Support vector machines</li>
+<p><li> Learn about bagging, boosting and trees
+<!-- * Support vector machines --></li>
 <p><li> Learn about basic data analysis;</li>
 <p><li> Be capable of extending the acquired knowledge to other systems and cases;</li>
 <p><li> Have an understanding of central algorithms used in data analysis and machine learning;</li>
-<p><li> Work on numerical projects to illustrate the theory. The projects play a central role and you are expected to know modern programming languages like Python or C++.</li>
+<p><li> Work on numerical projects to illustrate the theory. The projects play a central role.</li>
 </ul>
 </section>
 
@@ -1322,7 +1428,7 @@ ethical conduct is emphasized throughout the course.
 
 <ol>
 <p><li> Rapidly emerging application area</li>
-<p><li> Experiment AND theory are evolving in many many fields. Still many low-hanging fruits.</li>
+<p><li> Experiment AND theory are evolving in many many fields.</li> 
 <p><li> Requires education/retraining for more widespread adoption</li>
 <p><li> A lot of &#8220;word-of-mouth&#8221; development methods</li>
 </ol>
@@ -1354,7 +1460,7 @@ Neural Networks, etc.</a>
 <ol>
 <p><li> Identify problem type: classification, regression</li>
 <p><li> Consider your data carefully</li>
-<p><li> Choose a simple model that fits 1. and 2.</li>
+<p><li> Choose a simple model that fits 1 and 2</li>
 <p><li> Consider your data carefully again! Think of data representation more carefully.</li>
 <p><li> Based on your results, feedback loop to earliest possible point</li>
 </ol>
@@ -1363,17 +1469,17 @@ Neural Networks, etc.</a>
 <section>
 <h2 id="choose-a-model-and-algorithm">Choose a Model and Algorithm  </h2>
 
-<ol>
+<ul>
 <p><li> Supervised?</li>
 <p><li> Start with the simplest model that fits your problem</li>
 <p><li> Start with minimal processing of data</li>
-</ol>
+</ul>
 </section>
 
 <section>
 <h2 id="preparing-your-data">Preparing Your Data </h2>
 
-<ol>
+<ul>
 <p><li> Shuffle your data</li>
 <p><li> Mean center your data</li>
 <ul>
@@ -1395,50 +1501,37 @@ Neural Networks, etc.</a>
 <p><li> Can be hit or miss</li>
 </ul>
 <p>
-<p><li> When to do train/test split?</li>
-</ol>
+ <p><li> When to do train/test split?</li>
+</ul>
 </section>
 
 <section>
-<h2 id="which-activation-and-weights-to-choose-in-neural-networks">Which Activation and Weights to Choose in Neural Networks </h2>
+<h2 id="which-activation-and-weights-to-choose-in-neural-networks">Which activation and weights to choose in neural networks </h2>
 
-<ol>
-<p><li> RELU? ELU?</li>
+<ul>
+<p><li> RELU? ELU? GELU? etc</li>
 <p><li> Sigmoid or Tanh?</li>
-<p><li> Set all weights to 0?</li>
-<ul>
-
-<p><li> Terrible idea</li>
+<p><li> Set all weights to 0? Terrible idea</li>
+<p><li> Set all weights to random values? Small random values</li>
 </ul>
-<p>
-<p><li> Set all weights to random values?</li>
-<ul>
-
-<p><li> Small random values</li>
-</ul>
-<p>
-</ol>
 </section>
 
 <section>
 <h2 id="optimization-methods-and-hyperparameters">Optimization Methods and Hyperparameters </h2>
-<ol>
-<p><li> Stochastic gradient descent
-<ol type="a"></li>
-<p><li> Stochastic gradient descent + momentum</li>
-</ol>
-<p>
-<p><li> State-of-the-art approaches:</li>
 <ul>
-
-<p><li> RMSProp</li>
-
-<p><li> Adam</li>
-
-<p><li> and more</li>
+<p><li> Stochastic gradient descent</li>
+<ul>
+ <p><li> Stochastic gradient descent + momentum</li>
 </ul>
 <p>
+<p><li> State-of-the-art approaches:
+<ol type="a"></li>
+ <p><li> RMSProp</li>
+ <p><li> Adam</li>
+ <p><li> and more</li>
 </ol>
+<p>
+</ul>
 <p>
 <p>Which regularization and hyperparameters? \( L_1 \) or \( L_2 \), soft
 classifiers, depths of trees and many other. Need to explore a large
@@ -1461,17 +1554,17 @@ set of hyperparameters and regularization methods.
 <section>
 <h2 id="other-courses-on-data-science-and-machine-learning-at-uio">Other courses on Data science and Machine Learning  at UiO </h2>
 
-<p>The link here <a href="https://www.mn.uio.no/english/research/about/centre-focus/innovation/data-science/studies/" target="_blank"><tt>https://www.mn.uio.no/english/research/about/centre-focus/innovation/data-science/studies/</tt></a>  gives an excellent overview of courses on Machine learning at UiO.</p>
-
 <ol>
-<p><li> <a href="http://www.uio.no/studier/emner/matnat/math/STK2100/index-eng.html" target="_blank">STK2100 Machine learning and statistical methods for prediction and classification</a>.</li> 
-<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN3050/index-eng.html" target="_blank">IN3050/IN4050 Introduction to Artificial Intelligence and Machine Learning</a>. Introductory course in machine learning and AI with an algorithmic approach.</li> 
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/fys/FYS5429/index-eng.html" target="_blank">FYS5429 &#8211; Advanced machine learning and data analysis for the physical sciences</a></li>
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN3050/index-eng.html" target="_blank">IN3050/IN4050 Introduction to Artificial Intelligence and Machine Learning</a>. Introductory course in machine learning and AI</li>
 <p><li> <a href="http://www.uio.no/studier/emner/matnat/math/STK-INF3000/index-eng.html" target="_blank">STK-INF3000/4000 Selected Topics in Data Science</a>. The course provides insight into selected contemporary relevant topics within Data Science.</li> 
 <p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN4080/index.html" target="_blank">IN4080 Natural Language Processing</a>. Probabilistic and machine learning techniques applied to natural language processing.</li> 
 <p><li> <a href="https://www.uio.no/studier/emner/matnat/math/STK-IN4300/index-eng.html" target="_blank">STK-IN4300 &#8211; Statistical learning methods in Data Science</a>. An advanced introduction to statistical and machine learning. For students with a good mathematics and statistics background.</li>
-<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN-STK5000/index-eng.html" target="_blank">IN-STK5000  Adaptive Methods for Data-Based Decision Making</a>. Methods for adaptive collection and processing of data based on machine learning techniques.</li> 
-<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5400/" target="_blank">IN5400/INF5860 &#8211; Machine Learning for Image Analysis</a>. An introduction to deep learning with particular emphasis on applications within Image analysis, but useful for other application areas too.</li>
-<p><li> <a href="https://www.uio.no/studier/emner/matnat/its/TEK5040/" target="_blank">TEK5040 &#8211; Dyp l&#230;ring for autonome systemer</a>. The course addresses advanced algorithms and architectures for deep learning with neural networks. The course provides an introduction to how deep-learning techniques can be used in the construction of key parts of advanced autonomous systems that exist in physical environments and cyber environments.</li>
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN-STK5000/index-eng.html" target="_blank">IN-STK5000  Responsible Data Science</a>. Methods for adaptive collection and processing of data based on machine learning techniques.</li> 
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN4310/index.html" target="_blank">IN4310 &#8211; Machine Learning for Image Analysis</a>. An introduction to deep learning with particular emphasis on applications within Image analysis, but useful for other application areas too.</li>
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5310/index.html" target="_blank">IN5310 &#8211; Advanced Deep Learning for Image Analysis</a></li>
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/ifi/IN5490/index.html" target="_blank">IN5490 &#8211; Advanced Topics in Artificial Intelligence for Intelligent Systems</a></li>
+<p><li> <a href="https://www.uio.no/studier/emner/matnat/its/TEK5040/" target="_blank">TEK5040 &#8211; Deep learning for autonomous systems</a>. The course addresses advanced algorithms and architectures for deep learning with neural networks. The course provides an introduction to how deep-learning techniques can be used in the construction of key parts of advanced autonomous systems that exist in physical environments and cyber environments.</li>
 </ol>
 </section>
 
